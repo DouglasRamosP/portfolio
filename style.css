@@ -106,8 +106,8 @@ a {
   margin-top: 108px;
   display: flex;
   justify-content: space-between;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 50px 50px 0; /* topo 50px, laterais 50px */
+  gap: 50px;
 }
 
 .skill-content-row-2 {
@@ -131,11 +131,6 @@ a {
 .skill-item > img {
   width: 100px;
   height: 100px;
-}
-
-.skill-content .skill-item:nth-child(2) {
-  margin-left: 50px;
-  margin-right: 50px;
 }
 
 .skill-item > span {
@@ -251,7 +246,6 @@ a {
 .contact-form .form-input {
   margin-bottom: 20px;
 }
-
 
 /*RODAPÉ*/
 .footer-container {
