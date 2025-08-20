@@ -116,6 +116,11 @@
   align-items: center;
 }
 
+.skill-item > img {
+  width: 100px;
+  height: 100px;
+}
+
 .skill-content .skill-item:nth-child(2) {
   margin-left: 50px;
   margin-right: 50px;
