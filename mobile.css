@@ -33,12 +33,27 @@
 
   .skill-content {
     flex-direction: column;
-    margin: 20px 20px 0;
+    margin: 30px 20px 20px;
+    gap: 20px;
   }
 
   .skill-content-row-2 {
     flex-direction: column;
-    margin: 20px 20px 0;
+    margin: 20px 20px 20;
+    gap: 20px;
+  }
+
+  .skill-item {
+    padding: 20px;
+  }
+
+  .skill-item > img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .skill-item > p {
+    font-size: 0.875rem;
   }
 
   /*UTILITIES*/
@@ -50,5 +65,9 @@
     /*Já temos um paddin ou margin sendo herdada de algum elemento, caso precise, verificar*/
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .section-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 }
