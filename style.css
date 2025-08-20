@@ -143,6 +143,7 @@ a {
 .skill-item > p {
   color: white;
   opacity: 75%;
+  text-align: center;
 }
 
 /*PROJETOS*/
