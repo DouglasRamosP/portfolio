@@ -10,6 +10,19 @@ a {
   text-decoration: none;
 }
 
+:root {
+  --nav-h: 72px;
+} /* ajuste pra altura real da navbar */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h);
+} /* evita “cortar” o título */
+
+.section-container,
+.showcase-container {
+  scroll-margin-top: var(--nav-h);
+} /* fallback fino */
+
 /*Navbar*/
 .navbar-container {
   width: 100%;
