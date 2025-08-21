@@ -3,6 +3,7 @@
     display: none;
   }
 
+  /*SHOWCASE*/
   .showcase-container > h1 {
     font-size: 2.3rem;
     text-align: center;
@@ -15,6 +16,7 @@
     margin-top: 15px;
   }
 
+  /*SOBRE MIM*/
   .about-me-content {
     flex-direction: column;
     margin: 20px 20px 0;
@@ -31,6 +33,7 @@
     margin-top: 20px;
   }
 
+  /*HABILIDADES*/
   .skill-content {
     flex-direction: column;
     margin: 30px 20px 20px;
@@ -55,6 +58,89 @@
   .skill-item > p {
     font-size: 0.875rem;
   }
+
+  /*PROJETOS*/
+  .project-item {
+    flex-direction: column;
+  }
+
+  .projec-item-1 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .projec-item-2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .projec-item-3 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .projec-item-4 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .project-text {
+    text-align: center;
+    margin-left: 0px;
+    max-width: 92%;
+    margin-top: 10px;
+  }
+
+  .project-text > h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-text > p {
+    font-size: 0.875rem;
+    margin-top: 10px;
+  }
+
+  .project-content {
+    margin-top: 50px;
+  }
+
+  .project-content .project-item:nth-child(2) {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .project-content .project-item:nth-child(2) > .project-item-image {
+    order: 1;
+    margin-left: 0;
+  }
+
+  .project-content .project-item:nth-child(2) > .project-text {
+    order: 2;
+  }
+
+  .project-content .project-item:nth-child(4) {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .project-content .project-item:nth-child(4) > .project-item-image {
+    order: 1;
+    margin-left: 0;
+  }
+
+  .project-content .project-item:nth-child(4) > .project-text {
+    order: 2;
+  }
+
+  /*FORMULÁRIO*/
+  .contact-form {
+    margin-top: 40px;
+  }
+
+  .contact-form {
+    margin-left: 16;
+    margin-right: 16;
+}
 
   /*UTILITIES*/
   .section-title {
