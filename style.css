@@ -25,17 +25,18 @@ html {
 
 /*Navbar*/
 .navbar-container {
+  position: fixed; /* sempre fixa no topo da viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
   width: 100%;
   display: flex;
   justify-content: flex-end;
   background: rgba(0, 0, 0, 0.6);
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 20px;
-  padding-right: 20px; /*Mesma coisa que: padding: 10px 20px;*/
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  position: absolute; /*Poassibilita que a navbar se posicione sobre o showcase-container*/
-  top: 0;
+  padding: 15px 20px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .navbar-container > ul {
