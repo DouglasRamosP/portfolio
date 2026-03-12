@@ -64,6 +64,11 @@
     flex-direction: column;
   }
 
+  .project-preview-card {
+    width: min(100%, 340px);
+    height: 220px;
+  }
+
   .projec-item-1 {
     margin-left: 0;
     margin-right: 0;
@@ -141,6 +146,18 @@
     margin-left: 16;
     margin-right: 16;
 }
+
+  .floating-cv-button {
+    right: 16px;
+    bottom: 16px;
+    padding: 12px 16px;
+    font-size: 0.75rem;
+    gap: 8px;
+  }
+
+  .floating-cv-button span {
+    display: none;
+  }
 
   /*UTILITIES*/
   .section-title {
