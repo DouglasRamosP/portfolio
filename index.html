@@ -1,16 +1,21 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
   <head>
-    <title>Portifólio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mobile.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio de Douglas Pimenta, desenvolvedor full stack com foco em interfaces modernas, aplicações web e boas práticas de engenharia de software."
+    />
+    <title>Douglas Pimenta | Portfólio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <meta name="viewport" content="width=device-width, initial-scale-1.0" />
-
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mobile.css" />
     <script
       src="https://kit.fontawesome.com/b3f89f3272.js"
       crossorigin="anonymous"
@@ -18,236 +23,310 @@
   </head>
 
   <body>
+    <header class="hero-shell" id="inicio">
+      <nav class="navbar-container">
+        <a class="brand" href="#inicio">Douglas Pimenta</a>
 
-    <!-- Navbar -->
-    <nav class="navbar-container">
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#habilidade">Habilidades</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+        <ul class="nav-links">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
 
-    <!-- Showcase -->
-    <div id="inicio" class="showcase-container">
-      <h1>Olá, eu sou o Douglas Pimenta!</h1>
-      <p>A Professional Full-Satck Developer</p>
-    </div>
-
-    <!-- About me -->
-    <div id="sobre" class="section-container">
-      <div class="section-content">
-        <h2 class="section-title">Sobre mim</h2>
-
-        <div class="about-me-content">
-          <img src="./images/avatar.svg" alt="Douglas Ramos" />
-          <p>
-            Sou um desenvolvedor Full Stack em transição de carreira, apaixonado
-            por criar soluções escaláveis, modernas e bem arquitetadas. Antes de
-            mergulhar no mundo do código, construí uma sólida trajetória na área
-            de TI, atuando com suporte técnico, infraestrutura de redes,
-            segurança da informação e computação em nuvem (AWS, Azure, Google
-            Cloud). Nesse período, liderei projetos de migração para a nuvem e
-            padronização de redes, sempre com foco em desempenho, segurança e
-            inovação. Meu primeiro contato marcante com tecnologia veio no
-            início da minha carreira, quando percebi que era possível
-            transformar processos manuais e repetitivos em tarefas
-            automatizadas. Essa descoberta despertou em mim a curiosidade por
-            programação — e logo comecei a explorar JavaScript, React, Node.js e
-            outras tecnologias modernas. Desde então, tenho buscado unir minha
-            experiência em infraestrutura e segurança com o desenvolvimento de
-            aplicações robustas e eficientes. Hoje, meu objetivo é evoluir
-            continuamente como desenvolvedor, explorando novas stacks,
-            aprofundando-me em boas práticas e contribuindo para projetos que
-            impactem positivamente empresas e pessoas.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Skills -->
-    <div id="habilidade" class="section-container">
-      <div class="section-content">
-        <h2 class="section-title">Habilidades</h2>
-
-        <div class="skill-content">
-          <div class="skill-item">
-            <img src="./images/html-icon.png" alt="HTML" />
-            <span>HTML</span>
-            <p>
-              Linguagem responsável por definir o esqueleto de sites. Possuo
-              amplo domínio.
-            </p>
-          </div>
-
-          <div class="skill-item">
-            <img src="./images/css-icon.png" alt="CSS" />
-            <span>CSS</span>
-            <p>
-              Linguagem responsável por definir o estilo dos sites. Possuo amplo
-              domínio.
-            </p>
-          </div>
-
-          <div class="skill-item">
-            <img src="./images/js-icon.png" alt="JS" />
-            <span>JavaScript</span>
-            <p>
-              Linguagem responsável por adicionar lógica aos sites. Possuo amplo
-              domínio
-            </p>
-          </div>
+      <section class="showcase-container">
+        <div class="hero-badge">
+          <i class="fa-solid fa-code"></i>
+          <span>Portfólio profissional</span>
         </div>
 
-        <div class="skill-content-row-2">
-          <div class="skill-item">
-            <img src="./images/typescript-icon.png" alt="TypeScript" />
-            <span>TypeScript</span>
-            <p>
-              Superset tipado do JavaScript que traz segurança e escalabilidade
-              ao código. Possuo amplo domínio.
-            </p>
-          </div>
+        <h1>Construo produtos web funcionais, modernos e bem organizados.</h1>
 
-          <div class="skill-item">
-            <img src="./images/react-icon.png" alt="React" />
-            <span>React</span>
-            <p>
-              Biblioteca JavaScript para criar interfaces componentizadas e
-              reativas. Possuo amplo domínio.
-            </p>
-          </div>
+        <p>
+          Desenvolvedor Full Stack em transição de carreira, unindo base sólida em
+          infraestrutura, redes e cloud com foco atual em front-end moderno,
+          experiência do usuário e evolução constante em engenharia de software.
+        </p>
 
-          <div class="skill-item">
-            <img src="./images/nextjs-icon.png" alt="NEXTJS" />
-            <span>NEXT.JS</span>
-            <p>
-              Framework React para apps rápidas com SSR/SSG, rotas e otimizações
-              nativas. Possuo amplo domínio.
-            </p>
+        <div class="hero-cta-group">
+          <a class="button-primary" href="#projetos">Ver projetos</a>
+          <a class="button-secondary" href="#contato">Falar comigo</a>
+        </div>
+
+        <div class="hero-highlights">
+          <div class="highlight-card">
+            <strong>2+</strong>
+            <span>Projetos reais publicados</span>
+          </div>
+          <div class="highlight-card">
+            <strong>Front-end</strong>
+            <span>Interfaces responsivas e componentizadas</span>
+          </div>
+          <div class="highlight-card">
+            <strong>Full Stack</strong>
+            <span>React, JavaScript, APIs e boas práticas</span>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </header>
 
-    <!-- Projects -->
-    <div id="projetos" class="section-container">
-      <div class="section-content">
-        <h2 class="section-title">Projetos</h2>
+    <main>
+      <section id="sobre" class="section-container">
+        <div class="section-content about-grid">
+          <div class="section-heading">
+            <span class="section-kicker">Sobre mim</span>
+            <h2 class="section-title">Tecnologia com visão prática de produto e operação.</h2>
+            <p class="section-description">
+              Venho de uma trajetória forte em TI, infraestrutura e suporte, o que me deu uma visão
+              muito prática sobre estabilidade, organização e experiência real do usuário. Hoje,
+              aplico essa base no desenvolvimento de aplicações web com foco em código limpo,
+              interfaces modernas e evolução contínua como desenvolvedor.
+            </p>
+          </div>
 
-        <div class="project-content">
-          <a
-            class="project-item project-link"
-            href="https://task-manager-omega-beige.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="project-item-image project-preview-card">
-              <img
-                src="https://image.thum.io/get/width/900/https://task-manager-omega-beige.vercel.app/"
-                alt="Prévia do projeto Task Manager"
-              />
-            </div>
+          <div class="about-card">
+            <img src="./images/avatar.svg" alt="Avatar de Douglas Pimenta" />
 
-            <div class="project-text">
-              <h3>Task Manager</h3>
+            <div class="about-card-content">
+              <h3>Douglas Pimenta</h3>
               <p>
-                Aplicação web para organização de tarefas com dashboard de acompanhamento,
-                separação por períodos do dia, atualização de status em tempo real e controle
-                visual da meta de consumo de água. O projeto foi construído com foco em uma
-                experiência simples, responsiva e orientada a produtividade.
+                Atuo estudando e construindo projetos que reforçam minha transição para o
+                desenvolvimento full stack, com atenção especial para arquitetura, componentização,
+                design visual e entregas que façam sentido no mundo real.
               </p>
-            </div>
-          </a>
 
-          <a
-            class="project-item project-link"
-            href="https://bewear-bootcamp-taupe.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="project-item-image project-preview-card">
-              <img
-                src="https://image.thum.io/get/width/900/https://bewear-bootcamp-taupe.vercel.app/"
-                alt="Prévia do projeto BEWEAR"
-              />
+              <div class="tag-list">
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Node.js</span>
+                <span>UI Responsiva</span>
+                <span>Infra & Cloud</span>
+              </div>
             </div>
-
-            <div class="project-text">
-              <h3>BEWEAR Store</h3>
-              <p>
-                E-commerce com navegação mobile-first, catálogo de produtos, vitrine de destaques
-                e estrutura pensada para evolução contínua da experiência de compra. O foco atual
-                está em usabilidade para dispositivos móveis, organização visual do catálogo e base
-                pronta para expansão das funcionalidades comerciais.
-              </p>
-            </div>
-          </a>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- Contact -->
-    <div id="contato" class="section-container">
-      <div class="section-content">
-        <h2 class="section-title">Entre em Contato</h2>
+      <section id="habilidades" class="section-container section-dark">
+        <div class="section-content">
+          <div class="section-heading centered-heading">
+            <span class="section-kicker">Habilidades</span>
+            <h2 class="section-title">Tecnologias que uso para construir aplicações modernas.</h2>
+            <p class="section-description">
+              Meu foco atual está em front-end moderno com base sólida em desenvolvimento web e uma
+              visão técnica que também considera performance, organização e manutenção do projeto.
+            </p>
+          </div>
 
-        <form class="contact-form">
-          <input
-            type="text"
-            name="fullName"
-            id="fullName"
-            placeholder="Seu nome"
-            class="form-input"
-          />
+          <div class="skills-grid">
+            <article class="skill-item">
+              <img src="./images/html-icon.png" alt="HTML" />
+              <h3>HTML</h3>
+              <p>Estrutura semântica para páginas bem organizadas, acessíveis e preparadas para crescimento.</p>
+            </article>
 
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Seu e-mail"
-            class="form-input"
-          />
+            <article class="skill-item">
+              <img src="./images/css-icon.png" alt="CSS" />
+              <h3>CSS</h3>
+              <p>Estilização moderna com foco em layout, responsividade, hierarquia visual e consistência.</p>
+            </article>
 
-          <textarea
-            name="message"
-            id="message"
-            rows="5"
-            placeholder="Sua mensagem"
-            class="form-input"
-          ></textarea>
+            <article class="skill-item">
+              <img src="./images/js-icon.png" alt="JavaScript" />
+              <h3>JavaScript</h3>
+              <p>Lógica de interface, interatividade e manipulação de dados para experiências mais dinâmicas.</p>
+            </article>
 
-          <input type="submit" value="Enviar" class="form-button" />
-        </form>
-      </div>
-    </div>
+            <article class="skill-item">
+              <img src="./images/typescript-icon.png" alt="TypeScript" />
+              <h3>TypeScript</h3>
+              <p>Mais segurança no desenvolvimento e melhor escalabilidade para projetos mais robustos.</p>
+            </article>
 
-    <a href="https://example.com/curriculo-douglas-pimenta.pdf" class="floating-cv-button" target="_blank" rel="noopener noreferrer" aria-label="Baixar currículo">
+            <article class="skill-item">
+              <img src="./images/react-icon.png" alt="React" />
+              <h3>React</h3>
+              <p>Interfaces componentizadas, reutilização de código e organização pensada para evolução.</p>
+            </article>
+
+            <article class="skill-item">
+              <img src="./images/nextjs-icon.png" alt="Next.js" />
+              <h3>Next.js</h3>
+              <p>Base para aplicações modernas com foco em performance, roteamento e estrutura profissional.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projetos" class="section-container">
+        <div class="section-content">
+          <div class="section-heading centered-heading">
+            <span class="section-kicker">Projetos</span>
+            <h2 class="section-title">Projetos reais que mostram minha evolução prática.</h2>
+            <p class="section-description">
+              Aqui estão aplicações reais publicadas, com foco em usabilidade, organização visual,
+              componentização e construção de base sólida para futuras melhorias.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <a
+              class="project-card"
+              href="https://task-manager-omega-beige.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="project-thumb">
+                <img
+                  src="https://image.thum.io/get/width/1200/crop/700/https://task-manager-omega-beige.vercel.app/"
+                  alt="Prévia do projeto Task Manager"
+                />
+              </div>
+
+              <div class="project-card-content">
+                <div class="project-meta">
+                  <span>Projeto real</span>
+                  <span>React · JSON Server · Vercel</span>
+                </div>
+
+                <h3>Task Manager</h3>
+                <p>
+                  Gerenciador de tarefas com dashboard, separação por períodos do dia, atualização de
+                  status e acompanhamento visual de consumo de água. Projeto construído com foco em
+                  produtividade, clareza visual e fluxo intuitivo de uso.
+                </p>
+
+                <div class="tag-list compact-tags">
+                  <span>React Query</span>
+                  <span>CRUD</span>
+                  <span>UI Dashboard</span>
+                </div>
+              </div>
+            </a>
+
+            <a
+              class="project-card"
+              href="https://bewear-bootcamp-taupe.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="project-thumb">
+                <img
+                  src="https://image.thum.io/get/width/1200/crop/700/https://bewear-bootcamp-taupe.vercel.app/"
+                  alt="Prévia do projeto BEWEAR Store"
+                />
+              </div>
+
+              <div class="project-card-content">
+                <div class="project-meta">
+                  <span>Projeto real</span>
+                  <span>E-commerce · Mobile First</span>
+                </div>
+
+                <h3>BEWEAR Store</h3>
+                <p>
+                  E-commerce com foco atual em experiência mobile, vitrine visual de produtos e
+                  estrutura pronta para expansão de funcionalidades. O projeto prioriza navegação
+                  clara, hierarquia de conteúdo e base escalável para evolução comercial.
+                </p>
+
+                <div class="tag-list compact-tags">
+                  <span>Responsivo</span>
+                  <span>Catálogo</span>
+                  <span>UX Mobile</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="section-container section-dark">
+        <div class="section-content">
+          <div class="section-heading centered-heading">
+            <span class="section-kicker">Contato</span>
+            <h2 class="section-title">Vamos construir algo útil juntos.</h2>
+            <p class="section-description">
+              Estou aberto a oportunidades, conexões profissionais e conversas sobre projetos,
+              desenvolvimento front-end e evolução na área de tecnologia.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <a class="contact-card" href="mailto:douglasramospimenta@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong>E-mail</strong>
+                <span>douglasramospimenta@gmail.com</span>
+              </div>
+            </a>
+
+            <a
+              class="contact-card"
+              href="https://www.linkedin.com/in/douglas-ramos-pimenta-83a4b7143/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+              <div>
+                <strong>LinkedIn</strong>
+                <span>Conectar e acompanhar minha jornada</span>
+              </div>
+            </a>
+
+            <a
+              class="contact-card"
+              href="https://github.com/DouglasRamosP"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fa-brands fa-github"></i>
+              <div>
+                <strong>GitHub</strong>
+                <span>Repositórios, estudos e projetos em evolução</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a
+      href="https://example.com/curriculo-douglas-pimenta.pdf"
+      class="floating-cv-button"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Baixar currículo"
+    >
       <i class="fa-solid fa-file-arrow-down"></i>
-      <span>Currículo</span>
+      <span>Baixar currículo</span>
     </a>
 
-    <!-- Footer -->
-    <div class="footer-container">
+    <footer class="footer-container">
+      <p>© 2026 Douglas Pimenta. Portfólio desenvolvido com foco em evolução constante.</p>
+
       <div class="social-items">
-        <a href="mailto:douglasramospimenta@gmail.com"
-          ><i class="fa-solid fa-envelope fa-xl"></i
-        ></a>
+        <a href="mailto:douglasramospimenta@gmail.com" aria-label="Enviar e-mail">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
         <a
           href="https://www.linkedin.com/in/douglas-ramos-pimenta-83a4b7143/"
           target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
         >
-          <i class="fa-brands fa-linkedin fa-xl"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
         </a>
-
-        <a href="https://www.instagram.com/_dramosp/" target="_blank">
-          <i class="fa-brands fa-instagram fa-xl"></i>
+        <a
+          href="https://github.com/DouglasRamosP"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+        >
+          <i class="fa-brands fa-github"></i>
         </a>
       </div>
-
-      <p>Copyright 2025</p>
-    </div>
+    </footer>
   </body>
 </html>
