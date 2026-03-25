@@ -19,7 +19,6 @@
 
   .hero-highlights,
   .about-grid,
-  .skills-grid,
   .projects-grid,
   .contact-grid {
     grid-template-columns: 1fr;
@@ -70,7 +69,6 @@
   }
 
   .project-card-content,
-  .skill-item,
   .contact-card,
   .highlight-card,
   .about-card {
@@ -80,6 +78,35 @@
   .project-meta {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .skill-item {
+    min-height: 96px;
+    padding: 18px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .skill-item h3,
+  .skill-item p {
+    display: none;
+  }
+
+  .skill-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0;
+  }
+
+  .skill-logo {
+    width: 30px;
+    height: 30px;
   }
 
   .floating-cv-button {
@@ -114,5 +141,14 @@
 
   .section-container {
     padding: 64px 12px;
+  }
+
+  .skills-grid {
+    gap: 12px;
+  }
+
+  .skill-item {
+    min-height: 88px;
+    padding: 16px 8px;
   }
 }

@@ -3,14 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1120" />
+    <meta
+      name="description"
+      content="Portfólio de Douglas Pimenta, desenvolvedor full stack com foco em aplicações web modernas, interfaces bem estruturadas e boas práticas de engenharia de software."
+    />
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Douglas Pimenta | Portfólio" />
     <meta
-      name="description"
+      property="og:description"
       content="Portfólio de Douglas Pimenta, desenvolvedor full stack focado em aplicações web modernas, React, JavaScript e interfaces bem estruturadas."
     />
-    <meta property="og:url" content="https://douglasramospdev.com.br" />
+    <meta property="og:url" content="https://www.douglasramospdev.com.br" />
     <meta property="og:site_name" content="Douglas Pimenta | Portfólio" />
     <meta
       property="og:image"
@@ -24,14 +29,14 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Douglas Pimenta | Portfólio" />
     <meta
+      name="twitter:description"
+      content="Portfólio de Douglas Pimenta, desenvolvedor full stack com foco em aplicações web modernas, interfaces bem estruturadas e boas práticas de engenharia de software."
+    />
+    <meta
       name="twitter:image"
       content="https://www.douglasramospdev.com.br/images/preview-site.png"
     />
-    <meta
-      name="description"
-      content="Portfólio de Douglas Pimenta, desenvolvedor full stack com foco em interfaces modernas, aplicações web e boas práticas de engenharia de software."
-    />
-    <link rel="icon" href="/images/favicon.png" />
+    <link rel="icon" href="./images/favicon.png" />
     <title>Douglas Pimenta | Portfólio</title>
     <link rel="canonical" href="https://www.douglasramospdev.com.br" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -50,7 +55,7 @@
 
   <body>
     <header class="hero-shell" id="inicio">
-      <nav class="navbar-container">
+      <nav class="navbar-container" aria-label="Navegação principal">
         <a class="brand" href="#inicio">Douglas Pimenta</a>
 
         <ul class="nav-links">
@@ -61,13 +66,15 @@
         </ul>
       </nav>
 
-      <section class="showcase-container">
+      <section class="showcase-container" aria-labelledby="intro-title">
         <div class="hero-badge">
           <i class="fa-solid fa-code"></i>
           <span>Portfólio profissional</span>
         </div>
 
-        <h1>Construo produtos web funcionais, modernos e bem organizados.</h1>
+        <h1 id="intro-title">
+          Construo produtos web funcionais, modernos e bem organizados.
+        </h1>
 
         <p>
           Desenvolvedor Full Stack em transição de carreira, unindo base sólida
@@ -98,11 +105,15 @@
     </header>
 
     <main>
-      <section id="sobre" class="section-container">
+      <section
+        id="sobre"
+        class="section-container"
+        aria-labelledby="sobre-title"
+      >
         <div class="section-content about-grid">
           <div class="section-heading">
             <span class="section-kicker">Sobre mim</span>
-            <h2 class="section-title">
+            <h2 id="sobre-title" class="section-title">
               Tecnologia com visão prática de produto e operação.
             </h2>
             <p class="section-description">
@@ -138,11 +149,15 @@
         </div>
       </section>
 
-      <section id="habilidades" class="section-container section-dark">
+      <section
+        id="habilidades"
+        class="section-container section-dark"
+        aria-labelledby="habilidades-title"
+      >
         <div class="section-content">
           <div class="section-heading centered-heading">
             <span class="section-kicker">Habilidades</span>
-            <h2 class="section-title">
+            <h2 id="habilidades-title" class="section-title">
               Tecnologias que uso para construir aplicações modernas.
             </h2>
             <p class="section-description">
@@ -153,8 +168,15 @@
           </div>
 
           <div class="skills-grid">
-            <article class="skill-item">
-              <img src="./images/html-icon.png" alt="HTML" />
+            <article class="skill-item" aria-label="HTML">
+              <span class="skill-icon" aria-hidden="true">
+                <img
+                  class="skill-logo"
+                  src="https://cdn.simpleicons.org/html5/E34F26"
+                  alt=""
+                  loading="lazy"
+                />
+              </span>
               <h3>HTML</h3>
               <p>
                 Estrutura semântica para páginas bem organizadas, acessíveis e
@@ -162,8 +184,15 @@
               </p>
             </article>
 
-            <article class="skill-item">
-              <img src="./images/css-icon.png" alt="CSS" />
+            <article class="skill-item" aria-label="CSS">
+              <span class="skill-icon" aria-hidden="true">
+                <img
+                  class="skill-logo"
+                  src="https://cdn.simpleicons.org/css/1572B6"
+                  alt=""
+                  loading="lazy"
+                />
+              </span>
               <h3>CSS</h3>
               <p>
                 Estilização moderna com foco em layout, responsividade,
@@ -171,8 +200,15 @@
               </p>
             </article>
 
-            <article class="skill-item">
-              <img src="./images/js-icon.png" alt="JavaScript" />
+            <article class="skill-item" aria-label="JavaScript">
+              <span class="skill-icon" aria-hidden="true">
+                <img
+                  class="skill-logo"
+                  src="https://cdn.simpleicons.org/javascript/F7DF1E"
+                  alt=""
+                  loading="lazy"
+                />
+              </span>
               <h3>JavaScript</h3>
               <p>
                 Lógica de interface, interatividade e manipulação de dados para
@@ -180,8 +216,15 @@
               </p>
             </article>
 
-            <article class="skill-item">
-              <img src="./images/typescript-icon.png" alt="TypeScript" />
+            <article class="skill-item" aria-label="TypeScript">
+              <span class="skill-icon" aria-hidden="true">
+                <img
+                  class="skill-logo"
+                  src="https://cdn.simpleicons.org/typescript/3178C6"
+                  alt=""
+                  loading="lazy"
+                />
+              </span>
               <h3>TypeScript</h3>
               <p>
                 Mais segurança no desenvolvimento e melhor escalabilidade para
@@ -189,8 +232,15 @@
               </p>
             </article>
 
-            <article class="skill-item">
-              <img src="./images/react-icon.png" alt="React" />
+            <article class="skill-item" aria-label="React">
+              <span class="skill-icon" aria-hidden="true">
+                <img
+                  class="skill-logo"
+                  src="https://cdn.simpleicons.org/react/61DAFB"
+                  alt=""
+                  loading="lazy"
+                />
+              </span>
               <h3>React</h3>
               <p>
                 Interfaces componentizadas, reutilização de código e organização
@@ -198,23 +248,82 @@
               </p>
             </article>
 
-            <article class="skill-item">
-              <img src="./images/nextjs-icon.png" alt="Next.js" />
+            <article class="skill-item" aria-label="Next.js">
+              <span class="skill-icon" aria-hidden="true">
+                <img
+                  class="skill-logo"
+                  src="https://cdn.simpleicons.org/nextdotjs/FFFFFF"
+                  alt=""
+                  loading="lazy"
+                />
+              </span>
               <h3>Next.js</h3>
               <p>
                 Base para aplicações modernas com foco em performance,
                 roteamento e estrutura profissional.
               </p>
             </article>
+
+            <article class="skill-item" aria-label="Node.js">
+              <span class="skill-icon" aria-hidden="true">
+                <img
+                  class="skill-logo"
+                  src="https://cdn.simpleicons.org/nodedotjs/5FA04E"
+                  alt=""
+                  loading="lazy"
+                />
+              </span>
+              <h3>Node.js</h3>
+              <p>
+                Desenvolvimento de APIs e serviços com JavaScript no back-end,
+                pensando em organização e escalabilidade.
+              </p>
+            </article>
+
+            <article class="skill-item" aria-label="Git">
+              <span class="skill-icon" aria-hidden="true">
+                <img
+                  class="skill-logo"
+                  src="https://cdn.simpleicons.org/git/F05032"
+                  alt=""
+                  loading="lazy"
+                />
+              </span>
+              <h3>Git</h3>
+              <p>
+                Controle de versão para acompanhar mudanças, experimentar com
+                segurança e manter histórico limpo do projeto.
+              </p>
+            </article>
+
+            <article class="skill-item" aria-label="GitHub">
+              <span class="skill-icon" aria-hidden="true">
+                <img
+                  class="skill-logo"
+                  src="https://cdn.simpleicons.org/github/FFFFFF"
+                  alt=""
+                  loading="lazy"
+                />
+              </span>
+              <h3>GitHub</h3>
+              <p>
+                Publicação, colaboração e versionamento de projetos com foco em
+                portfólio, organização e trabalho em equipe.
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section id="projetos" class="section-container">
+      <section
+        id="projetos"
+        class="section-container"
+        aria-labelledby="projetos-title"
+      >
         <div class="section-content">
           <div class="section-heading centered-heading">
             <span class="section-kicker">Projetos</span>
-            <h2 class="section-title">
+            <h2 id="projetos-title" class="section-title">
               Projetos reais que mostram minha evolução prática.
             </h2>
             <p class="section-description">
@@ -235,6 +344,7 @@
                 <img
                   src="./images/task-manager-preview.png"
                   alt="Preview do projeto Task Manager"
+                  loading="lazy"
                 />
               </div>
 
@@ -270,6 +380,7 @@
                 <img
                   src="./images/bewear-preview.png"
                   alt="Preview do projeto BEWEAR Store"
+                  loading="lazy"
                 />
               </div>
 
@@ -299,11 +410,17 @@
         </div>
       </section>
 
-      <section id="contato" class="section-container section-dark">
+      <section
+        id="contato"
+        class="section-container section-dark"
+        aria-labelledby="contato-title"
+      >
         <div class="section-content">
           <div class="section-heading centered-heading">
             <span class="section-kicker">Contato</span>
-            <h2 class="section-title">Vamos construir algo útil juntos.</h2>
+            <h2 id="contato-title" class="section-title">
+              Vamos construir algo útil juntos.
+            </h2>
             <p class="section-description">
               Estou aberto a oportunidades, conexões profissionais e conversas
               sobre projetos, desenvolvimento front-end e evolução na área de
