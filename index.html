@@ -329,85 +329,157 @@
               Projetos reais que mostram minha evolução prática.
             </h2>
             <p class="section-description">
-              Aqui estão aplicações reais publicadas, com foco em usabilidade,
-              organização visual, componentização e construção de base sólida
-              para futuras melhorias.
+              Aqui estão aplicações reais publicadas e também produtos em
+              desenvolvimento, com foco em usabilidade, organização visual,
+              arquitetura consistente e evolução orientada a contexto real de
+              negócio.
             </p>
           </div>
 
-          <div class="projects-grid">
-            <a
-              class="project-card"
-              href="https://task-manager-omega-beige.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="project-thumb">
-                <img
-                  src="./images/task-manager-preview.png"
-                  alt="Preview do projeto Task Manager"
-                  loading="lazy"
-                />
-              </div>
+          <div class="projects-section-block">
+            <div class="projects-section-header">
+              <span class="projects-section-label">Publicados</span>
+              <p>
+                Aplicações já disponíveis publicamente, com foco em execução,
+                interface e experiência de uso.
+              </p>
+            </div>
 
-              <div class="project-card-content">
-                <div class="project-meta">
-                  <span>Projeto real</span>
-                  <span>React · JSON Server · Vercel</span>
+            <div class="projects-grid">
+              <a
+                class="project-card"
+                href="https://task-manager-omega-beige.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="project-thumb">
+                  <img
+                    src="./images/task-manager-preview.png"
+                    alt="Preview do projeto Task Manager"
+                    loading="lazy"
+                  />
                 </div>
 
-                <h3>Task Manager</h3>
-                <p>
-                  Gerenciador de tarefas com dashboard, separação por períodos
-                  do dia, atualização de status e acompanhamento visual de
-                  consumo de água. Projeto construído com foco em produtividade,
-                  clareza visual e fluxo intuitivo de uso.
-                </p>
+                <div class="project-card-content">
+                  <div class="project-meta">
+                    <span>Projeto real</span>
+                    <span>React · JSON Server · Vercel</span>
+                  </div>
 
-                <div class="tag-list compact-tags">
-                  <span>React Query</span>
-                  <span>CRUD</span>
-                  <span>UI Dashboard</span>
+                  <h3>Task Manager</h3>
+                  <p>
+                    Gerenciador de tarefas com dashboard, separação por períodos
+                    do dia, atualização de status e acompanhamento visual de
+                    consumo de água. Projeto construído com foco em
+                    produtividade, clareza visual e fluxo intuitivo de uso.
+                  </p>
+
+                  <div class="tag-list compact-tags">
+                    <span>React Query</span>
+                    <span>CRUD</span>
+                    <span>UI Dashboard</span>
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
 
-            <a
-              class="project-card"
-              href="https://bewear-bootcamp-taupe.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div class="project-thumb">
-                <img
-                  src="./images/bewear-preview.png"
-                  alt="Preview do projeto BEWEAR Store"
-                  loading="lazy"
-                />
-              </div>
-
-              <div class="project-card-content">
-                <div class="project-meta">
-                  <span>Projeto real</span>
-                  <span>E-commerce · Mobile First</span>
+              <a
+                class="project-card"
+                href="https://bewear-bootcamp-taupe.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="project-thumb">
+                  <img
+                    src="./images/bewear-preview.png"
+                    alt="Preview do projeto BEWEAR Store"
+                    loading="lazy"
+                  />
                 </div>
 
-                <h3>BEWEAR Store</h3>
-                <p>
-                  E-commerce com foco atual em experiência mobile, vitrine
-                  visual de produtos e estrutura pronta para expansão de
-                  funcionalidades. O projeto prioriza navegação clara,
-                  hierarquia de conteúdo e base escalável para evolução
-                  comercial.
-                </p>
+                <div class="project-card-content">
+                  <div class="project-meta">
+                    <span>Projeto real</span>
+                    <span>E-commerce · Mobile First</span>
+                  </div>
 
-                <div class="tag-list compact-tags">
-                  <span>Responsivo</span>
-                  <span>Catálogo</span>
-                  <span>UX Mobile</span>
+                  <h3>BEWEAR Store</h3>
+                  <p>
+                    E-commerce com foco atual em experiência mobile, vitrine
+                    visual de produtos e estrutura pronta para expansão de
+                    funcionalidades. O projeto prioriza navegação clara,
+                    hierarquia de conteúdo e base escalável para evolução
+                    comercial.
+                  </p>
+
+                  <div class="tag-list compact-tags">
+                    <span>Responsivo</span>
+                    <span>Catálogo</span>
+                    <span>UX Mobile</span>
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
+          </div>
+
+          <div class="projects-section-block projects-section-block-spaced">
+            <div class="projects-section-header">
+              <span class="projects-section-label">Em andamento</span>
+              <p>
+                Produtos em evolução com foco forte em modelagem de negócio,
+                operação e arquitetura pronta para crescer.
+              </p>
+            </div>
+
+            <div class="projects-grid">
+              <button
+                class="project-card project-card-interactive"
+                type="button"
+                aria-haspopup="dialog"
+                aria-controls="crm-project-modal"
+                data-open-modal="crm-project-modal"
+              >
+                <div class="project-thumb project-thumb-interactive">
+                  <img
+                    src="./images/crm-preview.svg"
+                    alt="Preview do projeto CRM operacional para gestão de negócios no setor de veículos pesados"
+                    loading="lazy"
+                  />
+                  <span class="project-thumb-badge">Projeto em andamento</span>
+                  <span class="project-thumb-hover-hint">
+                    Clique para abrir o case
+                  </span>
+                </div>
+
+                <div class="project-card-content">
+                  <div class="project-meta">
+                    <span>Projeto em andamento</span>
+                    <span>React 19 · Vite · Tailwind CSS v4</span>
+                  </div>
+
+                  <h3>CRM Operacional para loja de caminhões orientado à demanda</h3>
+                  <p>
+                    Sistema interno voltado à operação comercial de uma empresa
+                    do setor de veículos pesados, com foco em demanda, funil,
+                    margem real, estoque e relacionamento. O projeto foi
+                    pensado para nascer em um nicho específico, mas com
+                    arquitetura preparada para evoluir para outras operações
+                    comerciais complexas.
+                  </p>
+
+                  <div class="tag-list compact-tags">
+                    <span>Demanda primeiro</span>
+                    <span>Estoque</span>
+                    <span>Serviços</span>
+                    <span>Margem real</span>
+                  </div>
+
+                  <div class="project-card-callout">
+                    <i class="fa-solid fa-arrow-pointer" aria-hidden="true"></i>
+                    <span>Case com vídeo e detalhes do produto</span>
+                  </div>
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -480,6 +552,260 @@
       <span>Baixar currículo</span>
     </a>
 
+    <div
+      class="modal-backdrop"
+      id="crm-project-modal"
+      aria-hidden="true"
+      tabindex="-1"
+    >
+      <div
+        class="project-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="crm-modal-title"
+      >
+        <button
+          class="project-modal-close"
+          type="button"
+          aria-label="Fechar detalhes do projeto CRM"
+          data-close-modal
+        >
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <div class="project-modal-body">
+          <section class="project-modal-hero">
+            <div class="project-modal-copy">
+              <span class="section-kicker">Projeto em andamento</span>
+              <h2 id="crm-modal-title">
+                CRM Operacional para loja de caminhões orientado à demanda
+              </h2>
+              <p class="project-modal-subtitle">
+                Projeto em andamento para estruturar CRM, estoque, serviços e
+                inteligência comercial em um único fluxo operacional.
+              </p>
+              <p class="project-modal-description">
+                CRM operacional desenvolvido para atender uma operação comercial
+                do segmento de veículos pesados, estruturado para organizar
+                demanda, negociação, estoque, serviços e relacionamento
+                comercial. Embora tenha nascido para esse contexto específico, o
+                produto foi pensado com lógica reutilizável para outros cenários
+                de negociação consultiva e operação comercial complexa.
+              </p>
+
+              <div class="tag-list compact-tags">
+                <span>B2B</span>
+                <span>CRM</span>
+                <span>Operação Comercial</span>
+              </div>
+            </div>
+
+            <div class="project-video-card">
+              <div class="project-video-frame">
+                <video
+                  controls
+                  playsinline
+                  preload="none"
+                  data-src="./movies/crm.mp4"
+                ></video>
+              </div>
+              <p>
+                Vídeo de navegação do CRM com foco em fluxo operacional,
+                dashboard, módulos e validações.
+              </p>
+            </div>
+          </section>
+
+          <div class="project-modal-grid">
+            <section class="project-modal-section">
+              <h3>Problema de negócio</h3>
+              <p>
+                Oportunidades comerciais desse setor podem nascer antes de
+                existir estoque disponível, enquanto informações de cliente,
+                empresa, produto, serviço e custo operacional ficam espalhadas.
+                Isso dificulta enxergar funil, margem real, capital parado e
+                prioridade comercial.
+              </p>
+            </section>
+
+            <section class="project-modal-section">
+              <h3>Solução proposta</h3>
+              <p>
+                Unificar CRM, estoque, serviços e inteligência comercial em um
+                fluxo único, orientado à demanda. O sistema conecta venda,
+                operação, relacionamento e leitura executiva para apoiar
+                decisão comercial sem expor regras proprietárias da operação.
+              </p>
+            </section>
+
+            <section class="project-modal-section">
+              <h3>O que já foi feito</h3>
+              <ul class="project-detail-list">
+                <li>
+                  Estruturação de um CRM com módulos de dashboard, negócios,
+                  estoque, pessoas, empresas, serviços e inteligência.
+                </li>
+                <li>
+                  Navegação por rotas com arquitetura moderna e visual mais
+                  próximo de software de operação.
+                </li>
+                <li>CRUD com persistência local via JSON Server.</li>
+                <li>
+                  Formulários com validação usando React Hook Form e Zod.
+                </li>
+                <li>
+                  Base de componentes em padrão shadcn/Radix para evolução do
+                  design system.
+                </li>
+                <li>
+                  Regra central refletida no produto: o negócio nasce da
+                  demanda, e não do estoque.
+                </li>
+                <li>
+                  Cálculo e leitura de margem real considerando serviços e
+                  custos operacionais.
+                </li>
+                <li>
+                  Alertas e indicadores executivos para acompanhar funil,
+                  capital parado, serviços em aberto e oportunidades.
+                </li>
+              </ul>
+            </section>
+
+            <section class="project-modal-section">
+              <h3>Módulos do sistema</h3>
+              <div class="tag-list">
+                <span>Dashboard</span>
+                <span>Negócios</span>
+                <span>Estoque</span>
+                <span>Pessoas</span>
+                <span>Empresas</span>
+                <span>Serviços</span>
+                <span>Inteligência Comercial</span>
+              </div>
+            </section>
+
+            <section class="project-modal-section">
+              <h3>Stack atual</h3>
+              <div class="tag-list">
+                <span>React 19</span>
+                <span>Vite</span>
+                <span>Tailwind CSS v4</span>
+                <span>React Router</span>
+                <span>React Hook Form</span>
+                <span>Zod</span>
+                <span>Radix UI</span>
+                <span>class-variance-authority</span>
+                <span>clsx</span>
+                <span>tailwind-merge</span>
+                <span>Sonner</span>
+                <span>JSON Server</span>
+                <span>ESLint</span>
+                <span>Prettier</span>
+                <span>Husky</span>
+              </div>
+            </section>
+
+            <section class="project-modal-section">
+              <h3>Roadmap</h3>
+              <ul class="project-detail-list">
+                <li>Backend em Node.js com API REST.</li>
+                <li>Banco relacional ou NoSQL conforme a evolução do produto.</li>
+                <li>
+                  IA e integrações externas para ampliar inteligência comercial.
+                </li>
+              </ul>
+            </section>
+
+            <section class="project-modal-section">
+              <h3>Regras de negócio expostas</h3>
+              <ul class="project-detail-list">
+                <li>O CRM é orientado à demanda.</li>
+                <li>O negócio pode começar sem produto vinculado.</li>
+                <li>
+                  Pessoas e empresas organizam o relacionamento comercial.
+                </li>
+                <li>
+                  Produtos podem entrar antes, durante ou depois da
+                  oportunidade.
+                </li>
+                <li>Serviços impactam a margem real da operação.</li>
+                <li>
+                  O sistema conecta venda, operação, estoque e decisão
+                  comercial.
+                </li>
+              </ul>
+            </section>
+
+            <section class="project-modal-section">
+              <h3>Público-alvo</h3>
+              <ul class="project-detail-list">
+                <li>Lojas e revendas de caminhões.</li>
+                <li>Operação comercial B2B do setor automotivo pesado.</li>
+                <li>Gestores comerciais.</li>
+                <li>Vendedores consultivos.</li>
+                <li>Times de estoque e operação.</li>
+                <li>
+                  Empresas que precisam integrar CRM, operação e margem.
+                </li>
+              </ul>
+            </section>
+
+            <section class="project-modal-section">
+              <h3>Problemas que ele resolve</h3>
+              <ul class="project-detail-list">
+                <li>
+                  Oportunidades comerciais que nascem antes de existir estoque.
+                </li>
+                <li>
+                  Falta de visão unificada entre cliente, empresa, negócio,
+                  produto e serviço.
+                </li>
+                <li>Dificuldade de enxergar margem real da venda.</li>
+                <li>Estoque parado sem contexto de demanda.</li>
+                <li>
+                  Informações espalhadas entre comercial, operação e
+                  fornecedores.
+                </li>
+                <li>
+                  Falta de alertas sobre negócios sem produto, custos abertos e
+                  capital imobilizado.
+                </li>
+              </ul>
+            </section>
+
+            <section class="project-modal-section">
+              <h3>Escalabilidade</h3>
+              <p>
+                O projeto foi desenvolvido para uma operação comercial do
+                segmento de veículos pesados, mas sua modelagem foi pensada para
+                ser adaptável a outros mercados com dinâmica semelhante, como
+                máquinas e equipamentos, implementos rodoviários, veículos
+                comerciais, revendas especializadas e operações B2B com vendas
+                consultivas.
+              </p>
+            </section>
+
+            <section class="project-modal-section">
+              <h3>Status atual e próximos passos</h3>
+              <p>
+                O produto já conta com base navegável, entidades estruturadas,
+                regras centrais de domínio refletidas na interface e demonstração
+                funcional em vídeo. A próxima etapa é consolidar backend, dados
+                persistentes mais robustos, integrações e inteligência
+                comercial.
+              </p>
+            </section>
+          </div>
+
+          <p class="project-modal-note">
+            Case apresentado sem expor nomes da empresa, clientes, fornecedores,
+            valores reais ou regras operacionais sensíveis.
+          </p>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer-container">
       <p>
         © 2026 Douglas Pimenta. Portfólio desenvolvido com foco em evolução
@@ -511,5 +837,80 @@
         </a>
       </div>
     </footer>
+
+    <script>
+      const body = document.body;
+      const modalTriggers = document.querySelectorAll("[data-open-modal]");
+      const closeButtons = document.querySelectorAll("[data-close-modal]");
+      let activeModal = null;
+
+      const loadVideoOnDemand = (modal) => {
+        const video = modal.querySelector("video[data-src]");
+
+        if (!video || video.getAttribute("src")) {
+          return;
+        }
+
+        video.setAttribute("src", video.dataset.src);
+        video.load();
+      };
+
+      const openModal = (modalId) => {
+        const modal = document.getElementById(modalId);
+
+        if (!modal) {
+          return;
+        }
+
+        loadVideoOnDemand(modal);
+        modal.classList.add("is-visible");
+        modal.setAttribute("aria-hidden", "false");
+        body.classList.add("modal-open");
+        activeModal = modal;
+
+        const closeButton = modal.querySelector("[data-close-modal]");
+        closeButton?.focus();
+      };
+
+      const closeModal = (modal) => {
+        if (!modal) {
+          return;
+        }
+
+        const video = modal.querySelector("video");
+        video?.pause();
+
+        modal.classList.remove("is-visible");
+        modal.setAttribute("aria-hidden", "true");
+        body.classList.remove("modal-open");
+        activeModal = null;
+      };
+
+      modalTriggers.forEach((trigger) => {
+        trigger.addEventListener("click", () => {
+          openModal(trigger.dataset.openModal);
+        });
+      });
+
+      closeButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          closeModal(button.closest(".modal-backdrop"));
+        });
+      });
+
+      document.querySelectorAll(".modal-backdrop").forEach((modal) => {
+        modal.addEventListener("click", (event) => {
+          if (event.target === modal) {
+            closeModal(modal);
+          }
+        });
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && activeModal) {
+          closeModal(activeModal);
+        }
+      });
+    </script>
   </body>
 </html>

@@ -20,6 +20,8 @@
   .hero-highlights,
   .about-grid,
   .projects-grid,
+  .project-modal-hero,
+  .project-modal-grid,
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -41,6 +43,11 @@
   .footer-container {
     flex-direction: column;
     text-align: center;
+  }
+
+  .project-modal {
+    width: min(92vw, 920px);
+    max-height: 92vh;
   }
 }
 
@@ -75,9 +82,54 @@
     padding: 20px;
   }
 
+  .projects-section-block-spaced {
+    margin-top: 40px;
+  }
+
   .project-meta {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .project-thumb-badge {
+    top: 16px;
+    right: 16px;
+  }
+
+  .project-thumb-hover-hint {
+    left: 16px;
+    bottom: 16px;
+    padding: 10px 14px;
+    font-size: 0.74rem;
+  }
+
+  .project-card-callout {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .project-modal-body {
+    padding: 24px 18px 22px;
+  }
+
+  .project-modal-close {
+    top: 12px;
+    left: calc(100% - 50px);
+  }
+
+  .project-modal-copy h2 {
+    font-size: 2rem;
+  }
+
+  .project-modal-subtitle,
+  .project-modal-description,
+  .project-modal-note {
+    font-size: 0.96rem;
+  }
+
+  .project-modal-section {
+    padding: 20px;
   }
 
   .skills-grid {
@@ -141,6 +193,16 @@
 
   .section-container {
     padding: 64px 12px;
+  }
+
+  .project-modal {
+    width: calc(100vw - 16px);
+    max-height: 94vh;
+    border-radius: 24px;
+  }
+
+  .modal-backdrop {
+    padding: 8px;
   }
 
   .skills-grid {
