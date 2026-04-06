@@ -1,0 +1,54 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="800" rx="40" fill="#06111F"/>
+  <rect x="40" y="40" width="1200" height="720" rx="32" fill="url(#paint0_linear)"/>
+  <circle cx="1170" cy="110" r="84" fill="#1D4ED8" fill-opacity="0.18"/>
+  <circle cx="145" cy="710" r="120" fill="#22C55E" fill-opacity="0.12"/>
+
+  <rect x="92" y="92" width="1096" height="72" rx="22" fill="#0D1729" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <rect x="128" y="116" width="152" height="24" rx="12" fill="#22C55E"/>
+  <rect x="922" y="112" width="88" height="30" rx="15" fill="#132238"/>
+  <rect x="1026" y="112" width="128" height="30" rx="15" fill="#132238"/>
+
+  <rect x="92" y="204" width="298" height="496" rx="28" fill="#0D1729" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <rect x="426" y="204" width="762" height="220" rx="28" fill="#0D1729" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <rect x="426" y="460" width="368" height="240" rx="28" fill="#0D1729" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <rect x="820" y="460" width="368" height="240" rx="28" fill="#0D1729" stroke="#FFFFFF" stroke-opacity="0.08"/>
+
+  <rect x="124" y="238" width="234" height="108" rx="24" fill="#101D33"/>
+  <rect x="124" y="366" width="234" height="108" rx="24" fill="#101D33"/>
+  <rect x="124" y="494" width="234" height="108" rx="24" fill="#101D33"/>
+  <rect x="124" y="622" width="234" height="46" rx="18" fill="#132238"/>
+
+  <rect x="462" y="240" width="184" height="92" rx="22" fill="#101D33"/>
+  <rect x="668" y="240" width="184" height="92" rx="22" fill="#101D33"/>
+  <rect x="874" y="240" width="278" height="92" rx="22" fill="#101D33"/>
+  <rect x="462" y="356" width="690" height="32" rx="16" fill="#132238"/>
+  <path d="M470 386C523 338 564 332 609 360C654 388 694 409 746 385C798 361 844 314 901 338C958 362 1002 399 1056 390C1090 384 1119 364 1144 340V392H470V386Z" fill="url(#paint1_linear)"/>
+  <path d="M470 381C523 333 564 327 609 355C654 383 694 404 746 380C798 356 844 309 901 333C958 357 1002 394 1056 385C1090 379 1119 359 1144 335" stroke="#86EFAC" stroke-width="8" stroke-linecap="round"/>
+
+  <rect x="458" y="496" width="304" height="24" rx="12" fill="#132238"/>
+  <rect x="458" y="536" width="226" height="16" rx="8" fill="#1B2B45"/>
+  <rect x="458" y="572" width="304" height="18" rx="9" fill="#1B2B45"/>
+  <rect x="458" y="608" width="268" height="18" rx="9" fill="#1B2B45"/>
+  <rect x="458" y="646" width="188" height="18" rx="9" fill="#1B2B45"/>
+
+  <rect x="852" y="496" width="304" height="24" rx="12" fill="#132238"/>
+  <rect x="852" y="540" width="64" height="112" rx="20" fill="#133B77"/>
+  <rect x="934" y="580" width="64" height="72" rx="20" fill="#1E4ED8"/>
+  <rect x="1016" y="528" width="64" height="124" rx="20" fill="#22C55E"/>
+  <rect x="1098" y="560" width="64" height="92" rx="20" fill="#60A5FA"/>
+
+  <text x="126" y="640" fill="#E5F0FF" font-family="Arial, sans-serif" font-size="62" font-weight="700">FinTrack</text>
+  <text x="126" y="688" fill="#8AA1C1" font-family="Arial, sans-serif" font-size="24">Dashboard financeiro integrado a API propria</text>
+
+  <defs>
+    <linearGradient id="paint0_linear" x1="640" y1="40" x2="640" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#091423"/>
+      <stop offset="1" stop-color="#08101F"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear" x1="807" y1="332" x2="807" y2="392" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22C55E" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#22C55E" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>

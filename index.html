@@ -345,79 +345,141 @@
               </p>
             </div>
 
-            <div class="projects-grid">
-              <a
-                class="project-card"
-                href="https://task-manager-omega-beige.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
+            <div
+              class="projects-carousel is-at-start"
+              data-carousel
+              aria-label="Projetos publicados"
+            >
+              <button
+                class="projects-carousel-arrow projects-carousel-arrow-prev"
+                type="button"
+                aria-label="Ver projetos publicados anteriores"
+                data-carousel-prev
               >
-                <div class="project-thumb">
-                  <img
-                    src="./images/task-manager-preview.png"
-                    alt="Preview do projeto Task Manager"
-                    loading="lazy"
-                  />
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+              </button>
+
+              <div class="projects-carousel-viewport" tabindex="0">
+                <div class="projects-carousel-track">
+                  <a
+                    class="project-card"
+                    href="https://bewear-bootcamp-taupe.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="project-thumb">
+                      <img
+                        src="./images/bewear-preview.png"
+                        alt="Preview do projeto BEWEAR Store"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <div class="project-card-content">
+                      <div class="project-meta">
+                        <span>Projeto real</span>
+                        <span>E-commerce · Mobile First</span>
+                      </div>
+
+                      <h3>BEWEAR Store</h3>
+                      <p>
+                        E-commerce com foco atual em experiência mobile, vitrine
+                        visual de produtos e estrutura pronta para expansão de
+                        funcionalidades. O projeto prioriza navegação clara,
+                        hierarquia de conteúdo e base escalável para evolução
+                        comercial.
+                      </p>
+
+                      <div class="tag-list compact-tags">
+                        <span>Responsivo</span>
+                        <span>Catálogo</span>
+                        <span>UX Mobile</span>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a
+                    class="project-card"
+                    href="https://dashboard-financeira-three.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="project-thumb">
+                      <img
+                        src="./images/fintrack-preview.svg"
+                        alt="Preview do projeto FinTrack, dashboard financeiro conectado a API própria"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <div class="project-card-content">
+                      <div class="project-meta">
+                        <span>Projeto real</span>
+                        <span>React · API REST · JWT</span>
+                      </div>
+
+                      <h3>FinTrack</h3>
+                      <p>
+                        Dashboard financeiro full stack com cadastro, login,
+                        autenticação JWT, refresh de sessão, resumo por período
+                        e CRUD de transações consumindo uma API própria.
+                      </p>
+
+                      <div class="tag-list compact-tags">
+                        <span>React Query</span>
+                        <span>Prisma</span>
+                        <span>PostgreSQL</span>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a
+                    class="project-card"
+                    href="https://task-manager-omega-beige.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="project-thumb">
+                      <img
+                        src="./images/task-manager-preview.png"
+                        alt="Preview do projeto Task Manager"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <div class="project-card-content">
+                      <div class="project-meta">
+                        <span>Projeto real</span>
+                        <span>React · JSON Server · Vercel</span>
+                      </div>
+
+                      <h3>Task Manager</h3>
+                      <p>
+                        Gerenciador de tarefas com dashboard, separação por
+                        períodos do dia, atualização de status e acompanhamento
+                        visual de consumo de água. Projeto construído com foco
+                        em produtividade, clareza visual e fluxo intuitivo de
+                        uso.
+                      </p>
+
+                      <div class="tag-list compact-tags">
+                        <span>React Query</span>
+                        <span>CRUD</span>
+                        <span>UI Dashboard</span>
+                      </div>
+                    </div>
+                  </a>
                 </div>
+              </div>
 
-                <div class="project-card-content">
-                  <div class="project-meta">
-                    <span>Projeto real</span>
-                    <span>React · JSON Server · Vercel</span>
-                  </div>
-
-                  <h3>Task Manager</h3>
-                  <p>
-                    Gerenciador de tarefas com dashboard, separação por períodos
-                    do dia, atualização de status e acompanhamento visual de
-                    consumo de água. Projeto construído com foco em
-                    produtividade, clareza visual e fluxo intuitivo de uso.
-                  </p>
-
-                  <div class="tag-list compact-tags">
-                    <span>React Query</span>
-                    <span>CRUD</span>
-                    <span>UI Dashboard</span>
-                  </div>
-                </div>
-              </a>
-
-              <a
-                class="project-card"
-                href="https://bewear-bootcamp-taupe.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                class="projects-carousel-arrow projects-carousel-arrow-next"
+                type="button"
+                aria-label="Ver próximos projetos publicados"
+                data-carousel-next
               >
-                <div class="project-thumb">
-                  <img
-                    src="./images/bewear-preview.png"
-                    alt="Preview do projeto BEWEAR Store"
-                    loading="lazy"
-                  />
-                </div>
-
-                <div class="project-card-content">
-                  <div class="project-meta">
-                    <span>Projeto real</span>
-                    <span>E-commerce · Mobile First</span>
-                  </div>
-
-                  <h3>BEWEAR Store</h3>
-                  <p>
-                    E-commerce com foco atual em experiência mobile, vitrine
-                    visual de produtos e estrutura pronta para expansão de
-                    funcionalidades. O projeto prioriza navegação clara,
-                    hierarquia de conteúdo e base escalável para evolução
-                    comercial.
-                  </p>
-
-                  <div class="tag-list compact-tags">
-                    <span>Responsivo</span>
-                    <span>Catálogo</span>
-                    <span>UX Mobile</span>
-                  </div>
-                </div>
-              </a>
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+              </button>
             </div>
           </div>
 
@@ -842,6 +904,7 @@
       const body = document.body;
       const modalTriggers = document.querySelectorAll("[data-open-modal]");
       const closeButtons = document.querySelectorAll("[data-close-modal]");
+      const projectCarousels = document.querySelectorAll("[data-carousel]");
       let activeModal = null;
 
       const loadVideoOnDemand = (modal) => {
@@ -911,6 +974,111 @@
           closeModal(activeModal);
         }
       });
+
+      const getVisibleProjectsCount = () => (window.innerWidth <= 768 ? 1 : 2);
+
+      const setupProjectCarousel = (carousel) => {
+        const viewport = carousel.querySelector(".projects-carousel-viewport");
+        const track = carousel.querySelector(".projects-carousel-track");
+        const cards = Array.from(track?.querySelectorAll(".project-card") ?? []);
+        const prevButton = carousel.querySelector("[data-carousel-prev]");
+        const nextButton = carousel.querySelector("[data-carousel-next]");
+
+        if (!viewport || !track || !cards.length || !prevButton || !nextButton) {
+          return;
+        }
+
+        let currentIndex = 0;
+
+        const getGap = () => {
+          const styles = window.getComputedStyle(track);
+          return Number.parseFloat(styles.columnGap || styles.gap || "0");
+        };
+
+        const getMaxIndex = () =>
+          Math.max(0, cards.length - getVisibleProjectsCount());
+
+        const getStep = () => {
+          const firstCard = cards[0];
+
+          if (!firstCard) {
+            return 0;
+          }
+
+          return firstCard.getBoundingClientRect().width + getGap();
+        };
+
+        const clampIndex = (index) =>
+          Math.min(Math.max(index, 0), getMaxIndex());
+
+        const updateVisibleCards = () => {
+          const visibleCount = getVisibleProjectsCount();
+
+          cards.forEach((card, index) => {
+            const isVisible =
+              index >= currentIndex && index < currentIndex + visibleCount;
+            card.classList.toggle("is-active", isVisible);
+          });
+        };
+
+        const updateControls = () => {
+          const maxIndex = getMaxIndex();
+          const isAtStart = currentIndex === 0;
+          const isAtEnd = currentIndex >= maxIndex;
+
+          prevButton.disabled = isAtStart;
+          nextButton.disabled = isAtEnd;
+
+          carousel.classList.toggle("is-at-start", isAtStart);
+          carousel.classList.toggle("is-at-end", isAtEnd);
+
+          updateVisibleCards();
+        };
+
+        const syncCurrentIndexFromScroll = () => {
+          const step = getStep();
+
+          if (!step) {
+            currentIndex = 0;
+            updateControls();
+            return;
+          }
+
+          currentIndex = clampIndex(Math.round(viewport.scrollLeft / step));
+          updateControls();
+        };
+
+        const scrollToIndex = (index) => {
+          currentIndex = clampIndex(index);
+
+          viewport.scrollTo({
+            left: currentIndex * getStep(),
+            behavior: "smooth",
+          });
+
+          updateControls();
+        };
+
+        prevButton.addEventListener("click", () => {
+          scrollToIndex(currentIndex - 1);
+        });
+
+        nextButton.addEventListener("click", () => {
+          scrollToIndex(currentIndex + 1);
+        });
+
+        viewport.addEventListener("scroll", syncCurrentIndexFromScroll, {
+          passive: true,
+        });
+
+        window.addEventListener("resize", () => {
+          scrollToIndex(currentIndex);
+        });
+
+        updateControls();
+      };
+
+      projectCarousels.forEach(setupProjectCarousel);
     </script>
   </body>
 </html>

@@ -382,6 +382,121 @@ img {
   line-height: 1.8;
 }
 
+.projects-carousel {
+  --carousel-gap: 28px;
+  --carousel-peek: 120px;
+  position: relative;
+}
+
+.projects-carousel::before,
+.projects-carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 96px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.projects-carousel::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(11, 17, 32, 0.96) 0%, rgba(11, 17, 32, 0) 100%);
+  backdrop-filter: blur(8px);
+}
+
+.projects-carousel::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(11, 17, 32, 0.96) 0%, rgba(11, 17, 32, 0) 100%);
+  backdrop-filter: blur(10px);
+}
+
+.projects-carousel.is-at-start::before,
+.projects-carousel.is-at-end::after {
+  opacity: 0;
+}
+
+.projects-carousel-viewport {
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+}
+
+.projects-carousel-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.projects-carousel-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - var(--carousel-gap) - var(--carousel-peek)) / 2);
+  gap: var(--carousel-gap);
+  padding: 4px 0;
+}
+
+.projects-carousel-track .project-card {
+  scroll-snap-align: start;
+  transform: scale(0.985);
+  opacity: 0.72;
+  filter: blur(1.8px) saturate(0.8);
+  transition:
+    transform 0.28s ease,
+    opacity 0.28s ease,
+    filter 0.28s ease,
+    border-color 0.25s ease;
+}
+
+.projects-carousel-track .project-card.is-active {
+  transform: scale(1);
+  opacity: 1;
+  filter: none;
+}
+
+.projects-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  background: rgba(8, 16, 31, 0.84);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    opacity 0.25s ease;
+  backdrop-filter: blur(18px);
+}
+
+.projects-carousel-arrow:hover:not(:disabled) {
+  transform: translateY(-50%) scale(1.04);
+  background: rgba(12, 20, 36, 0.95);
+  border-color: rgba(74, 222, 128, 0.32);
+}
+
+.projects-carousel-arrow:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
+.projects-carousel-arrow-prev {
+  left: 18px;
+}
+
+.projects-carousel-arrow-next {
+  right: 18px;
+}
+
 .project-card {
   width: 100%;
   border: 1px solid var(--border);
@@ -396,6 +511,13 @@ img {
 
 .project-card:hover {
   border-color: rgba(74, 222, 128, 0.42);
+}
+
+.projects-carousel-track .project-card:hover,
+.projects-carousel-track .project-card:focus-visible {
+  opacity: 1;
+  filter: none;
+  transform: scale(1);
 }
 
 .project-thumb {
