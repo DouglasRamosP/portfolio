@@ -363,6 +363,42 @@
                 <div class="projects-carousel-track">
                   <a
                     class="project-card"
+                    href="https://cms.wascer.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="project-thumb">
+                      <img
+                        src="./images/wascer-cms-preview-generated.png"
+                        alt="Preview do projeto Wascer CMS, central de ajuda com FAQ, documentação e blog"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <div class="project-card-content">
+                      <div class="project-meta">
+                        <span>Projeto real</span>
+                        <span>WordPress · Help Center · Bilíngue</span>
+                      </div>
+
+                      <h3>Wascer CMS</h3>
+                      <p>
+                        Central de ajuda publicada para a Wascer, construída com
+                        tema WordPress customizado, FAQ, documentação, blog,
+                        release notes, busca com REST API e navegação pensada
+                        para suporte e autoatendimento.
+                      </p>
+
+                      <div class="tag-list compact-tags">
+                        <span>Polylang</span>
+                        <span>REST API</span>
+                        <span>Dark Mode</span>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a
+                    class="project-card"
                     href="https://bewear-bootcamp-taupe.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -989,36 +1025,48 @@
         }
 
         let currentIndex = 0;
-
-        const getGap = () => {
-          const styles = window.getComputedStyle(track);
-          return Number.parseFloat(styles.columnGap || styles.gap || "0");
-        };
+        let isProgrammaticScroll = false;
+        let scrollReleaseTimer = null;
 
         const getMaxIndex = () =>
           Math.max(0, cards.length - getVisibleProjectsCount());
 
-        const getStep = () => {
-          const firstCard = cards[0];
-
-          if (!firstCard) {
-            return 0;
-          }
-
-          return firstCard.getBoundingClientRect().width + getGap();
-        };
-
         const clampIndex = (index) =>
           Math.min(Math.max(index, 0), getMaxIndex());
 
+        const getMaxScrollLeft = () =>
+          Math.max(0, viewport.scrollWidth - viewport.clientWidth);
+
+        const getScrollLeftForIndex = (index) => {
+          const clampedIndex = clampIndex(index);
+
+          if (window.innerWidth > 768 && clampedIndex === getMaxIndex()) {
+            return getMaxScrollLeft();
+          }
+
+          const targetCard = cards[clampedIndex];
+          return targetCard?.offsetLeft ?? 0;
+        };
+
         const updateVisibleCards = () => {
           const visibleCount = getVisibleProjectsCount();
+          const isAtEnd = currentIndex >= getMaxIndex();
 
           cards.forEach((card, index) => {
             const isVisible =
               index >= currentIndex && index < currentIndex + visibleCount;
-            card.classList.toggle("is-active", isVisible);
+            const isLastCard = index === cards.length - 1;
+            card.classList.toggle("is-active", isVisible || (isAtEnd && isLastCard));
           });
+        };
+
+        const applyEdgeState = () => {
+          const maxIndex = getMaxIndex();
+          const isAtStart = currentIndex === 0;
+          const isAtEnd = currentIndex >= maxIndex;
+
+          carousel.classList.toggle("is-at-start", isAtStart);
+          carousel.classList.toggle("is-at-end", isAtEnd);
         };
 
         const updateControls = () => {
@@ -1029,32 +1077,64 @@
           prevButton.disabled = isAtStart;
           nextButton.disabled = isAtEnd;
 
-          carousel.classList.toggle("is-at-start", isAtStart);
-          carousel.classList.toggle("is-at-end", isAtEnd);
-
+          applyEdgeState();
           updateVisibleCards();
         };
 
         const syncCurrentIndexFromScroll = () => {
-          const step = getStep();
+          if (isProgrammaticScroll) {
+            return;
+          }
 
-          if (!step) {
+          if (!cards.length) {
             currentIndex = 0;
             updateControls();
             return;
           }
 
-          currentIndex = clampIndex(Math.round(viewport.scrollLeft / step));
+          const maxScrollLeft = getMaxScrollLeft();
+
+          if (maxScrollLeft > 0 && viewport.scrollLeft >= maxScrollLeft - 2) {
+            currentIndex = getMaxIndex();
+            updateControls();
+            return;
+          }
+
+          const closestIndex = cards.reduce((bestIndex, card, index) => {
+            const bestDistance = Math.abs(
+              viewport.scrollLeft - getScrollLeftForIndex(bestIndex)
+            );
+            const currentDistance = Math.abs(
+              viewport.scrollLeft - card.offsetLeft
+            );
+
+            return currentDistance < bestDistance ? index : bestIndex;
+          }, 0);
+
+          currentIndex = clampIndex(closestIndex);
           updateControls();
         };
 
         const scrollToIndex = (index) => {
           currentIndex = clampIndex(index);
+          applyEdgeState();
+          isProgrammaticScroll = true;
 
-          viewport.scrollTo({
-            left: currentIndex * getStep(),
-            behavior: "smooth",
+          if (scrollReleaseTimer) {
+            window.clearTimeout(scrollReleaseTimer);
+          }
+
+          requestAnimationFrame(() => {
+            viewport.scrollTo({
+              left: getScrollLeftForIndex(currentIndex),
+              behavior: "smooth",
+            });
           });
+
+          scrollReleaseTimer = window.setTimeout(() => {
+            isProgrammaticScroll = false;
+            syncCurrentIndexFromScroll();
+          }, 450);
 
           updateControls();
         };

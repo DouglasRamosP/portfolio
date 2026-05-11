@@ -384,7 +384,6 @@ img {
 
 .projects-carousel {
   --carousel-gap: 28px;
-  --carousel-peek: 120px;
   position: relative;
 }
 
@@ -403,8 +402,9 @@ img {
 
 .projects-carousel::before {
   left: 0;
-  background: linear-gradient(90deg, rgba(11, 17, 32, 0.96) 0%, rgba(11, 17, 32, 0) 100%);
-  backdrop-filter: blur(8px);
+  width: 0;
+  background: none;
+  backdrop-filter: none;
 }
 
 .projects-carousel::after {
@@ -433,9 +433,13 @@ img {
 .projects-carousel-track {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% - var(--carousel-gap) - var(--carousel-peek)) / 2);
+  grid-auto-columns: calc((100% - (var(--carousel-gap) * 2)) / 2.5);
   gap: var(--carousel-gap);
   padding: 4px 0;
+}
+
+.projects-carousel.is-at-end .projects-carousel-track {
+  grid-auto-columns: calc((100% - var(--carousel-gap)) / 2);
 }
 
 .projects-carousel-track .project-card {
@@ -490,11 +494,11 @@ img {
 }
 
 .projects-carousel-arrow-prev {
-  left: 18px;
+  left: -26px;
 }
 
 .projects-carousel-arrow-next {
-  right: 18px;
+  right: -26px;
 }
 
 .project-card {
