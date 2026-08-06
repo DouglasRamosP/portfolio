@@ -19,7 +19,9 @@
 
   .hero-highlights,
   .about-grid,
+  .career-grid,
   .projects-grid,
+  .profile-projects-grid,
   .project-modal-hero,
   .project-modal-grid,
   .contact-grid {
@@ -76,6 +78,7 @@
   }
 
   .project-card-content,
+  .profile-project-card,
   .contact-card,
   .highlight-card,
   .about-card {
@@ -164,7 +167,7 @@
   }
 
   .skills-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 14px;
   }
 
@@ -237,11 +240,21 @@
   }
 
   .skills-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px;
   }
 
   .skill-item {
     min-height: 88px;
     padding: 16px 8px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-icon {
+    width: 52px;
+    height: 52px;
   }
 }
