@@ -51,6 +51,12 @@
       src="https://kit.fontawesome.com/b3f89f3272.js"
       crossorigin="anonymous"
     ></script>
+    <!-- StayView (teste em staging; remover ao final do teste) -->
+    <script
+      defer
+      src="https://staging-gnigats.cloudstay.com.br/sv.js"
+      data-site="9t9ypAkzJaQNqs5Q"
+    ></script>
   </head>
 
   <body>
@@ -79,8 +85,9 @@
 
         <p>
           Trabalho com JavaScript, TypeScript, Node.js, React e Next.js para
-          criar interfaces, APIs REST, dashboards e produtos web com organização,
-          validação, persistência de dados e base preparada para evolução.
+          criar interfaces, APIs REST, dashboards e produtos web com
+          organização, validação, persistência de dados e base preparada para
+          evolução.
         </p>
 
         <div class="hero-cta-group">
@@ -91,7 +98,9 @@
         <div class="hero-highlights">
           <div class="highlight-card">
             <strong>809+</strong>
-            <span>Seguidores no LinkedIn e mais de 500 conexões profissionais</span>
+            <span
+              >Seguidores no LinkedIn e mais de 500 conexões profissionais</span
+            >
           </div>
           <div class="highlight-card">
             <strong>React · Next.js · Node.js</strong>
@@ -122,8 +131,8 @@
               Sou Full-Stack Developer com foco em JavaScript, TypeScript,
               Node.js, React e Next.js. Tenho construído projetos com API REST,
               autenticação, PostgreSQL, Prisma, Docker, validação com Zod,
-              integração de pagamentos e interfaces responsivas orientadas a
-              uso real.
+              integração de pagamentos e interfaces responsivas orientadas a uso
+              real.
             </p>
           </div>
 
@@ -133,11 +142,10 @@
             <div class="about-card-content">
               <h3>Douglas Pimenta</h3>
               <p>
-                Atuo e estudo tecnologia com foco prático: transformar
-                problemas em sistemas organizados, testáveis e fáceis de
-                evoluir. Minha base combina front-end moderno, back-end com
-                responsabilidades bem separadas, banco de dados e atenção à
-                experiência de uso.
+                Atuo e estudo tecnologia com foco prático: transformar problemas
+                em sistemas organizados, testáveis e fáceis de evoluir. Minha
+                base combina front-end moderno, back-end com responsabilidades
+                bem separadas, banco de dados e atenção à experiência de uso.
               </p>
 
               <div class="tag-list">
@@ -228,8 +236,8 @@
             </h2>
             <p class="section-description">
               Minha stack principal cobre front-end, back-end, banco de dados,
-              validação, autenticação, containers e fluxo de desenvolvimento
-              com versionamento e padronização.
+              validação, autenticação, containers e fluxo de desenvolvimento com
+              versionamento e padronização.
             </p>
           </div>
 
@@ -604,9 +612,9 @@
             <div class="projects-section-header">
               <span class="projects-section-label">Atuação atual</span>
               <p>
-                Projetos em que estou integrado atualmente, com foco em
-                SaaS, hosting, provisionamento, faturamento, suporte e
-                integrações de ponta a ponta.
+                Projetos em que estou integrado atualmente, com foco em SaaS,
+                hosting, provisionamento, faturamento, suporte e integrações de
+                ponta a ponta.
               </p>
             </div>
 
@@ -671,8 +679,8 @@
                     shadcn/Radix, Zustand e TanStack Query.
                   </li>
                   <li>
-                    Back-end NestJS em monorepo com API REST, worker
-                    assíncrono, Data API, cron e serviços de provisionamento.
+                    Back-end NestJS em monorepo com API REST, worker assíncrono,
+                    Data API, cron e serviços de provisionamento.
                   </li>
                   <li>
                     Provisionamento via Kubernetes, filas com RabbitMQ/Bull,
@@ -1192,11 +1200,19 @@
       const setupProjectCarousel = (carousel) => {
         const viewport = carousel.querySelector(".projects-carousel-viewport");
         const track = carousel.querySelector(".projects-carousel-track");
-        const cards = Array.from(track?.querySelectorAll(".project-card") ?? []);
+        const cards = Array.from(
+          track?.querySelectorAll(".project-card") ?? [],
+        );
         const prevButton = carousel.querySelector("[data-carousel-prev]");
         const nextButton = carousel.querySelector("[data-carousel-next]");
 
-        if (!viewport || !track || !cards.length || !prevButton || !nextButton) {
+        if (
+          !viewport ||
+          !track ||
+          !cards.length ||
+          !prevButton ||
+          !nextButton
+        ) {
           return;
         }
 
@@ -1232,7 +1248,10 @@
             const isVisible =
               index >= currentIndex && index < currentIndex + visibleCount;
             const isLastCard = index === cards.length - 1;
-            card.classList.toggle("is-active", isVisible || (isAtEnd && isLastCard));
+            card.classList.toggle(
+              "is-active",
+              isVisible || (isAtEnd && isLastCard),
+            );
           });
         };
 
@@ -1278,10 +1297,10 @@
 
           const closestIndex = cards.reduce((bestIndex, card, index) => {
             const bestDistance = Math.abs(
-              viewport.scrollLeft - getScrollLeftForIndex(bestIndex)
+              viewport.scrollLeft - getScrollLeftForIndex(bestIndex),
             );
             const currentDistance = Math.abs(
-              viewport.scrollLeft - card.offsetLeft
+              viewport.scrollLeft - card.offsetLeft,
             );
 
             return currentDistance < bestDistance ? index : bestIndex;
