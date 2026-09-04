@@ -1,0 +1,126 @@
+.carousel {
+  --gap: 28px;
+  position: relative;
+}
+
+.carousel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 96px;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(270deg, rgba(11, 17, 32, 0.96) 0%, rgba(11, 17, 32, 0) 100%);
+  transition: opacity 0.25s ease;
+}
+
+.carousel.atEnd::after {
+  opacity: 0;
+}
+
+.viewport {
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  padding: 4px 0;
+}
+
+.viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - (var(--gap) * 2)) / 2.5);
+  gap: var(--gap);
+}
+
+.track > * {
+  scroll-snap-align: start;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  background: rgba(8, 16, 31, 0.84);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+  transform: translateY(-50%);
+  backdrop-filter: blur(18px);
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.arrow:hover:not(:disabled) {
+  transform: translateY(-50%) scale(1.04);
+  border-color: var(--primary-border);
+}
+
+.arrow:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
+.prev {
+  left: -26px;
+}
+
+.next {
+  right: -26px;
+}
+
+.dots {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--surface-border);
+  transition: background 0.25s ease, width 0.25s ease;
+}
+
+.dotActive {
+  width: 24px;
+  border-radius: 999px;
+  background: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    --gap: 18px;
+  }
+  .carousel::after {
+    width: 56px;
+  }
+  .track {
+    grid-auto-columns: calc(100% - 64px);
+  }
+  .arrow {
+    width: 44px;
+    height: 44px;
+  }
+  .prev {
+    left: -14px;
+  }
+  .next {
+    right: -14px;
+  }
+}
