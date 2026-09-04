@@ -1,0 +1,118 @@
+.shell {
+  min-height: 100vh;
+  position: relative;
+}
+
+.hero {
+  width: var(--content-width);
+  margin: 0 auto;
+  padding: 72px 0 96px;
+  min-height: calc(100vh - 108px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.badge {
+  composes: kicker from global;
+}
+
+.badge b {
+  color: var(--primary-light);
+}
+
+.title {
+  max-width: 900px;
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.title em {
+  font-style: normal;
+  background: linear-gradient(120deg, var(--primary-light), #a7f3d0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.intro {
+  max-width: 720px;
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.highlights {
+  width: 100%;
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.highlight {
+  composes: card from global;
+  border-radius: var(--radius-md);
+  padding: 22px;
+}
+
+.highlight strong {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+
+.highlight span {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    min-height: auto;
+    padding: 56px 0 72px;
+    align-items: center;
+    text-align: center;
+  }
+  .highlights {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.65rem;
+    line-height: 1.04;
+  }
+  .intro {
+    font-size: 0.98rem;
+  }
+  .actions {
+    width: 100%;
+    flex-direction: column;
+  }
+  .actions a {
+    width: 100%;
+  }
+  .highlight {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  .hero {
+    width: calc(100% - 24px);
+  }
+}
