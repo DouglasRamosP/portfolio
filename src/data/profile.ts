@@ -6,7 +6,7 @@ export const profile = {
   email: "douglasramospimenta@gmail.com",
   linkedin: "https://www.linkedin.com/in/douglas-ramos-pimenta-83a4b7143/",
   github: "https://github.com/DouglasRamosP",
-  cv: "https://drive.google.com/file/d/1hPpddZoPMVAcR-24Q9hxY4GY8QmASXig/view?usp=sharing",
+  cv: "https://drive.google.com/file/d/1CPc7uS3nO8TNK-tXMhVuUFZL9p5DCE51/view?usp=sharing",
   headline:
     "Construo produtos SaaS de ponta a ponta, do front-end à infraestrutura, com visão de produto.",
   intro:
