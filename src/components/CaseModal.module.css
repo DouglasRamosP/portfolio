@@ -60,6 +60,10 @@
   align-items: start;
 }
 
+.heroWithoutMedia {
+  grid-template-columns: 1fr;
+}
+
 .hero h2 {
   margin-top: 18px;
   font-size: clamp(2rem, 4vw, 3rem);

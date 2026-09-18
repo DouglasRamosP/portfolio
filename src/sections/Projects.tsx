@@ -129,7 +129,9 @@ export function Projects() {
                 </div>
                 <span className={styles.callout}>
                   <Icon name="pointer" size={16} />
-                  Abrir case com vídeo e detalhes do produto
+                  {crmCase.video
+                    ? "Abrir case com vídeo e detalhes do produto"
+                    : "Abrir case com detalhes do produto"}
                 </span>
               </div>
             </button>

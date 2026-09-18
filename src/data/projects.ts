@@ -153,7 +153,7 @@ export type CaseStudy = {
   subtitle: string;
   description: string;
   heroTags: string[];
-  video: { src: string; caption: string };
+  video?: { src: string; caption: string };
   sections: CaseSection[];
   note: string;
 };
@@ -173,11 +173,6 @@ export const crmCase: CaseStudy = {
   description:
     "CRM operacional desenvolvido para atender uma operação comercial do segmento de veículos pesados, estruturado para organizar demanda, negociação, estoque, serviços e relacionamento comercial. O produto foi pensado com lógica reutilizável para outros cenários de negociação consultiva.",
   heroTags: ["B2B", "CRM", "Operação Comercial"],
-  video: {
-    src: "/movies/crm.mp4",
-    caption:
-      "Vídeo de navegação do CRM com foco em fluxo operacional, dashboard, módulos e validações.",
-  },
   sections: [
     {
       title: "Problema de negócio",
