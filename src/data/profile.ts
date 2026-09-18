@@ -3,7 +3,7 @@ export const profile = {
   fullName: "Douglas Ramos Pimenta",
   role: "Full-Stack Developer · Product Owner",
   location: "Varginha, MG · Híbrido / Remoto",
-  email: "douglasramospimenta@gmail.com",
+  email: "douglas@douglasramospdev.com.br",
   linkedin: "https://www.linkedin.com/in/douglas-ramos-pimenta-83a4b7143/",
   github: "https://github.com/DouglasRamosP",
   cv: "https://drive.google.com/file/d/1CPc7uS3nO8TNK-tXMhVuUFZL9p5DCE51/view?usp=sharing",
