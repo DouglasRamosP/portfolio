@@ -9,7 +9,7 @@ Portfólio pessoal de Douglas Ramos Pimenta, construído com React 19, TypeScrip
 - `src/sections/`: seções da página (Hero, Sobre, Experiência, Projetos, Habilidades, Contato)
 - `src/components/`: componentes reutilizáveis (Navbar, Carousel, CaseModal, Icon, Footer)
 - `src/styles/global.css`: tokens de design e primitivas compartilhadas; cada componente tem seu CSS Module
-- `public/images` e `public/movies`: assets estáticos
+- `public/images`: assets estáticos
 
 ## Scripts
 
@@ -23,4 +23,4 @@ npm run preview    # preview do build
 
 ## Deploy
 
-Hospedado na Vercel. O framework Vite é detectado automaticamente (`npm run build`, saída em `dist/`).
+Hospedado na StayCloud por integração com o GitHub. O framework Vite é detectado automaticamente, com `npm run build` e saída em `dist/`. O projeto não requer variáveis de ambiente.

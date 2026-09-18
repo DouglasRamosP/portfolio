@@ -70,7 +70,9 @@ export function CaseModal({ study, onClose }: Props) {
         </button>
 
         <div className={styles.body}>
-          <section className={styles.hero}>
+          <section
+            className={`${styles.hero} ${study.video ? "" : styles.heroWithoutMedia}`}
+          >
             <div>
               <span className="kicker">{study.status}</span>
               <h2 id={`${study.id}-title`}>{study.name}</h2>
@@ -83,12 +85,14 @@ export function CaseModal({ study, onClose }: Props) {
               </div>
             </div>
 
-            <div className={styles.panel}>
-              <div className={styles.videoFrame}>
-                <video controls playsInline preload="metadata" src={study.video.src} />
+            {study.video && (
+              <div className={styles.panel}>
+                <div className={styles.videoFrame}>
+                  <video controls playsInline preload="metadata" src={study.video.src} />
+                </div>
+                <p>{study.video.caption}</p>
               </div>
-              <p>{study.video.caption}</p>
-            </div>
+            )}
           </section>
 
           <div className={styles.grid}>
