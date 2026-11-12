@@ -15,17 +15,17 @@ export function Projects() {
         <SectionHeading
           id="projetos-title"
           kicker="Projetos"
-          title="Produtos reais que mostram minha evolução prática."
-          description="Plataformas SaaS em que atuo hoje, aplicações publicadas e produtos em desenvolvimento, com foco em arquitetura consistente, usabilidade e contexto real de negócio."
+          title="Problemas reais, decisões técnicas e resultados."
+          description="Contribuições profissionais na StayCloud e na Wascer, projetos de formação e aplicações próprias. Cada entrega conecta implementação, experiência do usuário e contexto de negócio."
           centered
         />
 
         <div className={styles.block}>
           <div className={styles.blockHead}>
-            <span className="label">Atuação atual · Sourei</span>
+            <span className="label">Experiência em produtos · Sourei</span>
             <p>
-              Produtos em produção com clientes ativos. Contribuições listadas a partir do histórico
-              real de desenvolvimento, sem expor dados sensíveis.
+              Atuação atual na StayCloud e contribuições na Wascer, com foco em confiabilidade,
+              integração entre sistemas e experiência do cliente.
             </p>
           </div>
 

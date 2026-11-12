@@ -7,17 +7,17 @@ const pillars: { icon: IconName; title: string; text: string }[] = [
   {
     icon: "layers",
     title: "Visão de produto",
-    text: "Priorização de demandas, refinamento de requisitos e alinhamento entre stakeholders e time técnico.",
+    text: "Priorização por impacto no cliente, urgência e risco. Alinhamento de requisitos e contratos de API com engenharia, produto e marketing.",
   },
   {
     icon: "wrench",
-    title: "Engenharia com ownership",
-    text: "Arquitetura limpa, código sustentável, code review e integrações de ponta a ponta em produtos com clientes ativos.",
+    title: "Engenharia com responsabilidade",
+    text: "Migrações graduais, testes dos cenários de falha e code review para evoluir sistemas sem interromper a operação.",
   },
   {
     icon: "compass",
-    title: "Evolução contínua",
-    text: "Estudar, testar abordagens e construir projetos próprios para ampliar repertório e gerar impacto real.",
+    title: "Base em infraestrutura",
+    text: "Experiência com redes, servidores, segurança e backup que amplia meu olhar sobre disponibilidade e sustentação de software.",
   },
 ];
 
@@ -29,8 +29,8 @@ export function About() {
           <SectionHeading
             id="sobre-title"
             kicker="Sobre mim"
-            title="Desenvolvimento full stack com responsabilidade técnica e compromisso com entregas."
-            description="Sou Full-Stack Developer com foco em JavaScript, TypeScript, Node.js, React e Next.js, atuando no desenvolvimento de aplicações web, interfaces modernas e APIs com atenção à performance, escalabilidade, organização de código e experiência do usuário."
+            title="Da infraestrutura ao produto, com foco em resolver problemas reais."
+            description="Comecei no suporte técnico, assumi responsabilidades de infraestrutura no SESI/SENAI e avancei para o desenvolvimento de plataformas SaaS. Hoje, concilio Product Ownership e desenvolvimento full stack na StayCloud, conectando necessidades do negócio a decisões de arquitetura e entregas verificáveis."
           />
 
           <div className={styles.pillars}>
@@ -60,15 +60,15 @@ export function About() {
 
           <div className={styles.text}>
             <p>
-              Tenho perfil analítico, senso de ownership e facilidade para atuar de forma
-              colaborativa, com comunicação clara, resolução de problemas e melhoria contínua dos
-              processos e das entregas. Valorizo boas práticas, arquitetura limpa e um ambiente em
-              que qualidade, evolução e trabalho em equipe caminham juntos.
+              Minha formação técnica no CEFET-MG e o bacharelado em Sistemas de Informação pelo
+              UNIS sustentam uma atuação que vai da conectividade às aplicações. No SESI/SENAI,
+              trabalhei com redes, servidores, backup e orientação de estagiários de TI.
             </p>
             <p>
-              Tecnologia faz parte da minha rotina além do contexto profissional. Tenho interesse
-              especial em produtos SaaS, dashboards, CRMs, integrações e aplicações que resolvam
-              problemas reais de negócio.
+              Na Sourei, contribuí com StayCloud e Wascer e passei a concentrar minha atuação
+              na StayCloud. Me motiva investigar problemas complexos, aprofundar conhecimentos e
+              criar soluções úteis para as pessoas. Uso IA como apoio ao desenvolvimento, com revisão crítica, testes e
+              validação das soluções antes da entrega.
             </p>
           </div>
 

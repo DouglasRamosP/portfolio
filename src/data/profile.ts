@@ -4,25 +4,21 @@ export const profile = {
   role: "Full-Stack Developer · Product Owner",
   location: "Varginha, MG · Híbrido / Remoto",
   email: "douglas@douglasramospdev.com.br",
-  linkedin: "https://www.linkedin.com/in/douglas-ramos-pimenta-83a4b7143/",
+  linkedin: "https://www.linkedin.com/in/douglas-ramos-pimenta",
   github: "https://github.com/DouglasRamosP",
-  cv: "https://drive.google.com/file/d/1CPc7uS3nO8TNK-tXMhVuUFZL9p5DCE51/view?usp=sharing",
+  cv: "https://docs.google.com/document/d/1qQRViPSuf1u6vn0VxePqahwPXMRPkc_a/edit?usp=sharing&ouid=101179601036903570079&rtpof=true&sd=true",
   headline:
-    "Construo produtos SaaS de ponta a ponta, do front-end à infraestrutura, com visão de produto.",
+    "Conecto visão de produto à execução técnica para evoluir plataformas SaaS.",
   intro:
-    "Full-Stack Developer e Product Owner na Sourei. Atuo em plataformas SaaS reais com TypeScript, React, Next.js, SvelteKit, Node.js e NestJS, conciliando arquitetura, integrações, entregas consistentes e direcionamento de produto.",
+    "Sou Product Owner e desenvolvedor Full Stack na StayCloud, do Grupo Sourei. Combino experiência em infraestrutura, desenvolvimento e produto para transformar problemas dos usuários em soluções confiáveis — da priorização à implementação em TypeScript, SvelteKit e NestJS.",
   highlights: [
     {
-      value: "2 produtos SaaS",
-      text: "em produção com clientes ativos: StayCloud (hospedagem) e Wascer (GTM Server-Side)",
+      value: "4s → menos de 1s",
+      text: "na resolução de conta do painel, com a migração da autenticação para o Commerce Core",
     },
     {
-      value: "Front ao infra",
-      text: "Next.js, SvelteKit, NestJS, PostgreSQL, Redis, filas, Docker e Kubernetes",
-    },
-    {
-      value: "Produto + código",
-      text: "Product Owner conciliando roadmap, requisitos e desenvolvimento",
+      value: "Produto + engenharia",
+      text: "priorização por impacto, implementação e validação de entregas em produção",
     },
   ],
 } as const;

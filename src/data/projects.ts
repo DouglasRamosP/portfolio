@@ -16,21 +16,24 @@ export const workProjects: WorkProject[] = [
     org: "Sourei",
     tagline: "Painel de controle para hospedagem web, cloud, VPS e serviços digitais",
     description:
-      "Client area que unifica gestão de clientes, faturamento, provisionamento e suporte sobre o WHMCS. Ecossistema com painel principal, checkout dedicado, tema de autenticação, portal de documentação e um servidor MCP que expõe a API do WHMCS como ferramentas para agentes.",
+      "Plataforma de hospedagem com painel, checkout e integrações de faturamento e provisionamento. Atuo na evolução do produto e na migração gradual para o Commerce Core, um backend central em NestJS que unifica identidade e contas, mantendo o WHMCS como motor comercial.",
     role: "Full Stack Developer e Product Owner",
     contributions: [
-      "Autenticação e identidade: login OIDC com WHMCS, Google OAuth, SSO do client area e admin, 2FA via SSO e ciclo completo de logout/sessão com rollback controlado por ambiente.",
-      "Checkout dedicado em SvelteKit: login delegado ao WHMCS com fallback legado, reaproveitamento de fatura em nova tentativa de pagamento e rastreamento de cliques de afiliados.",
-      "Tema de autenticação e hooks em PHP no WHMCS (login, 2FA, reset de senha, consentimento OAuth), com separação por destino de publicação.",
-      "Convites de equipe e onboarding com fluxo OIDC endurecido, integração cPanel/WHM (MySQL remoto) e otimização de I/O do coletor de métricas.",
-      "Portal técnico de documentação (Next.js + Fumadocs) e contribuições no servidor MCP do WHMCS (config, auth admin, testes).",
+      "Commerce Core: desenvolvimento em NestJS, Prisma e PostgreSQL e migração incremental com Strangler Pattern. Autenticação unificada com Magic Link, Google OAuth, 2FA e SSO, preservando os vínculos dos usuários.",
+      "Performance: a resolução de conta caiu de cerca de 4 segundos para menos de 1 segundo, eliminando timeouts associados ao login. A leitura de métricas do Proxmox passou a ocorrer em segundo plano, sem travar o painel de VPS.",
+      "Retenção: integração de jornadas e benefícios ao cancelamento, com retorno ao fluxo original em até 2 segundos se a API externa falhar. Entrega com 27 novos testes, preservando os cerca de 7.900 existentes, e ativação por configuração.",
+      "Conversões: padronização do funil GA4/GTM entre painel e checkout, com valores conciliados com a fatura do WHMCS e deduplicação por pedido. O evento purchase representa a criação do pedido, sem significar confirmação do pagamento.",
+      "Operação: provisionamento automático de contas, integrações com WHMCS, cPanel e ResellerClub, testes em CI e deploys em Docker sem indisponibilidade, com observabilidade via Sentry.",
     ],
     stack: [
       "SvelteKit 2",
       "Svelte 5",
       "TypeScript",
       "Tailwind CSS 4",
-      "Node.js",
+      "NestJS · Node.js",
+      "Prisma · PostgreSQL",
+      "Sentry · GitHub Actions",
+      "GA4 · GTM",
       "PHP / WHMCS",
       "MySQL",
       "Supabase (Postgres)",
@@ -43,7 +46,7 @@ export const workProjects: WorkProject[] = [
   },
   {
     name: "Wascer",
-    period: "abr. 2025 – o momento",
+    period: "Contribuição no Grupo Sourei",
     org: "Sourei",
     tagline: "SaaS de GTM Server-Side Hosting com provisionamento automático em Kubernetes",
     description:
@@ -104,7 +107,7 @@ export const publishedProjects: PublishedProject[] = [
     url: "https://bewear-bootcamp-taupe.vercel.app/",
     image: "/images/bewear-preview.png",
     alt: "Preview do projeto BEWEAR Store",
-    kind: "Projeto real",
+    kind: "Projeto de formação",
     stack: "Next.js · Drizzle · Stripe",
     description:
       "E-commerce com Next.js App Router, TypeScript, Drizzle ORM, Postgres, autenticação com Google, checkout via Stripe e base componentizada com shadcn/ui.",
@@ -115,7 +118,7 @@ export const publishedProjects: PublishedProject[] = [
     url: "https://dashboard-financeira-three.vercel.app/",
     image: "/images/fintrack-preview.svg",
     alt: "Preview do projeto FinTrack, dashboard financeiro conectado a API própria",
-    kind: "Projeto real",
+    kind: "Projeto pessoal",
     stack: "React · API REST · JWT",
     description:
       "Dashboard financeiro full stack com cadastro, login, autenticação JWT, refresh de sessão, resumo por período e CRUD de transações consumindo uma API própria.",
@@ -126,7 +129,7 @@ export const publishedProjects: PublishedProject[] = [
     url: "https://task-manager-omega-beige.vercel.app/",
     image: "/images/task-manager-preview.png",
     alt: "Preview do projeto Task Manager",
-    kind: "Projeto real",
+    kind: "Projeto pessoal",
     stack: "React · JSON Server · Vercel",
     description:
       "Gerenciador de tarefas com dashboard, separação por períodos do dia, atualização de status e acompanhamento visual de consumo de água.",
@@ -247,7 +250,7 @@ export const crmCase: CaseStudy = {
     },
     {
       title: "Status atual e próximos passos",
-      text: "O produto já conta com base navegável, entidades estruturadas, regras centrais de domínio refletidas na interface e demonstração funcional em vídeo. A próxima etapa é consolidar backend, dados persistentes, integrações e inteligência comercial.",
+      text: "O produto já conta com base navegável, entidades estruturadas e regras centrais de domínio refletidas na interface. A próxima etapa é consolidar backend, dados persistentes, integrações e inteligência comercial.",
     },
   ],
   note: "Case apresentado sem expor nomes da empresa, clientes, fornecedores, valores reais ou regras operacionais sensíveis.",
