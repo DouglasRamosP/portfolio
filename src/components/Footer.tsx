@@ -10,10 +10,10 @@ export function Footer() {
         className={styles.cv}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Baixar currículo"
+        aria-label="Ver currículo"
       >
-        <Icon name="download" size={18} />
-        <span>Baixar currículo</span>
+        <Icon name="external" size={18} />
+        <span>Ver currículo</span>
       </a>
 
       <footer className={styles.footer}>

@@ -11,7 +11,7 @@ export function Contact() {
           id="contato-title"
           kicker="Contato"
           title="Vamos construir algo útil juntos."
-          description="Estou aberto a conexões, trocas de conhecimento e oportunidades em que eu possa contribuir com seriedade, energia e visão de crescimento."
+          description="Estou aberto a oportunidades em desenvolvimento full stack e produto, contribuindo com arquitetura, integrações e evolução de plataformas SaaS."
           centered
         />
 

@@ -17,8 +17,7 @@ export function Hero() {
         </div>
 
         <h1 id="intro-title" className={styles.title}>
-          Construo produtos SaaS <em>de ponta a ponta</em>, do front-end à infraestrutura, com
-          visão de produto.
+          Conecto <em>visão de produto</em> à execução técnica para evoluir plataformas SaaS.
         </h1>
 
         <p className={styles.intro}>{profile.intro}</p>

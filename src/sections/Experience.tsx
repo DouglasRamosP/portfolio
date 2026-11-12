@@ -16,7 +16,7 @@ export function Experience() {
             id="experiencia-title"
             kicker="Experiência"
             title="Trajetória profissional, formação e evolução contínua."
-            description="Atuação em produtos SaaS com clientes ativos, conciliando engenharia e direcionamento de produto, somada à formação acadêmica e à construção constante de projetos próprios."
+            description="Uma trajetória que conecta atendimento, infraestrutura de TI, desenvolvimento full stack e gestão de produto."
           />
 
           <div className={styles.education}>
@@ -51,11 +51,13 @@ export function Experience() {
               </div>
               {job.location && <p className={styles.location}>{job.location}</p>}
               <p className={styles.summary}>{job.summary}</p>
-              <ul className={styles.bullets}>
-                {job.bullets.map((b) => (
-                  <li key={b}>{b}</li>
-                ))}
-              </ul>
+              {job.bullets.length > 0 && (
+                <ul className={styles.bullets}>
+                  {job.bullets.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+              )}
               <div className="tags">
                 {job.tags.map((t) => (
                   <span key={t}>{t}</span>
