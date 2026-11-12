@@ -47,8 +47,15 @@
 }
 
 .links a:hover,
-.links a[aria-current="true"] {
+.links a[aria-current="location"] {
   color: var(--text);
+}
+
+.links a[aria-current="location"] {
+  color: var(--primary-light);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
 }
 
 .links a:hover {

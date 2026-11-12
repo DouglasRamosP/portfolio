@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/Navbar";
 import { Icon } from "@/components/Icon";
 import { profile } from "@/data/profile";
 import styles from "./Hero.module.css";
@@ -6,8 +5,6 @@ import styles from "./Hero.module.css";
 export function Hero() {
   return (
     <header className={styles.shell} id="inicio">
-      <Navbar />
-
       <section className={styles.hero} aria-labelledby="intro-title">
         <div className={styles.badge}>
           <Icon name="code" size={16} />

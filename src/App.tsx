@@ -1,3 +1,4 @@
+import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/sections/Hero";
 import { About } from "@/sections/About";
 import { Experience } from "@/sections/Experience";
@@ -9,6 +10,7 @@ import { Footer } from "@/components/Footer";
 export default function App() {
   return (
     <>
+      <Navbar />
       <Hero />
       <main>
         <About />
