@@ -1,99 +1,199 @@
-.block + .block {
-  margin-top: 56px;
+.section {
+  padding-block: clamp(38px, 4.8vw, 76px) clamp(42px, 6vw, 90px);
+  background: radial-gradient(ellipse 100% 880px at 90% 0%, #2a1c44, transparent), var(--bg-deep);
 }
 
-.blockHead {
-  margin-bottom: 22px;
+.content {
+  width: var(--content-width);
+  margin-inline: auto;
 }
 
-.blockHead p {
-  margin-top: 14px;
-  max-width: 720px;
+.title {
+  margin-bottom: clamp(24px, 3vw, 42px);
+  font-size: clamp(3rem, 6.8vw, 6.3rem);
+  letter-spacing: -0.065em;
+  line-height: 0.92;
+}
+
+.featured {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: center;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.featuredStage {
+  align-self: stretch;
+  display: grid;
+  place-items: center;
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  padding: clamp(24px, 4.5vw, 68px);
+  background: linear-gradient(150deg, #332150 6%, #614898 58%, #a287db);
+}
+
+.featuredStage::before {
+  position: absolute;
+  z-index: -1;
+  inset: -22%;
+  content: "";
+  background: repeating-linear-gradient(153deg, transparent 0 23px, #eee5ff23 24px 25px);
+}
+
+.featuredMedia img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 24px 56px #19102680;
+}
+
+.featuredBody,
+.publishedBody,
+.work {
+  padding: clamp(18px, 2.9vw, 36px);
+}
+
+.eyebrow {
+  color: var(--primary-light);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.065em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.featured h3 {
+  margin-top: 10px;
+  font-size: clamp(1.65rem, 2.85vw, 3rem);
+  letter-spacing: -0.045em;
+  line-height: 1.04;
+}
+
+.description {
+  margin-top: 12px;
   color: var(--muted);
-  line-height: 1.8;
+  font-size: 0.94rem;
+  line-height: 1.65;
 }
 
-.workGrid {
+.stack {
+  margin-top: 14px;
+  color: var(--text-soft);
+  font-size: 0.83rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.caseButton {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding-inline: 14px;
+  background: var(--primary-light);
+  color: var(--ink);
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: background-color 180ms ease;
+}
+
+.caseButton:hover {
+  background: var(--primary-pale);
+}
+
+.caseButton svg {
+  transition: transform 200ms ease;
+}
+
+.caseButton:is(:hover, :focus-visible) svg {
+  transform: translateX(3px);
+}
+
+.group {
+  margin-top: clamp(44px, 6vw, 86px);
+}
+
+.groupTitle {
+  margin-bottom: 18px;
+  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  letter-spacing: -0.055em;
+}
+
+.grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
+  gap: clamp(16px, 2.2vw, 30px);
+  align-items: start;
 }
 
-.work {
-  composes: card from global;
-  display: flex;
-  flex-direction: column;
-  padding: 26px;
-  border-radius: var(--radius-xl);
+.work,
+.published {
+  min-width: 0;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
 }
 
-.work h3 {
-  margin-top: 14px;
-  font-size: 1.6rem;
-  letter-spacing: -0.03em;
+.work h4,
+.published h4 {
+  margin-top: 6px;
+  font-size: clamp(1.5rem, 2.6vw, 2.2rem);
+  line-height: 1.15;
+  letter-spacing: -0.045em;
 }
 
 .tagline {
-  margin-top: 6px;
+  margin-top: 10px;
   color: var(--text-soft);
   font-weight: 600;
   line-height: 1.5;
 }
 
-.work > p {
-  margin-top: 14px;
-  color: var(--muted);
-  line-height: 1.8;
-}
-
-.role {
-  margin-top: 18px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--primary-pale);
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-
-.contribTitle {
+.result {
   margin-top: 16px;
-  font-size: 0.78rem;
+  padding-left: 12px;
+  border-left: 2px solid var(--primary-light);
+  color: var(--primary-pale);
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
+  line-height: 1.4;
 }
 
-.contrib {
-  composes: bullets from global;
-  margin-top: 10px;
-  font-size: 0.95rem;
+.details {
+  margin-top: 16px;
+  border-top: 1px solid var(--border);
 }
 
-.card {
-  composes: card from global;
-  display: block;
-  height: 100%;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  text-align: left;
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease;
+.details summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 46px;
+  gap: 10px;
+  color: var(--primary-light);
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
 }
 
-.card:hover,
-.card:focus-visible {
-  transform: translateY(-4px);
-  border-color: var(--primary-border);
+.details summary::-webkit-details-marker {
+  display: none;
+}
+
+.details[open] summary svg {
+  transform: rotate(90deg);
+}
+
+.details ul {
+  margin-top: 8px;
+  font-size: 0.94rem;
 }
 
 .thumb {
-  position: relative;
   overflow: hidden;
-  aspect-ratio: 16 / 10;
-  background: var(--bg-deep);
+  aspect-ratio: 3 / 2;
+  background: var(--bg);
 }
 
 .thumb img {
@@ -102,88 +202,107 @@
   object-fit: cover;
 }
 
-.thumbBadge {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: rgba(8, 16, 31, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: var(--text);
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+.published {
+  position: relative;
 }
 
-.body {
-  padding: 24px;
-}
-
-.body h3 {
-  margin-top: 16px;
-  font-size: 1.4rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.body p {
-  margin-top: 14px;
-  color: var(--muted);
-  line-height: 1.8;
-}
-
-.caseGrid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-}
-
-.caseButton {
-  width: 100%;
-  cursor: pointer;
-}
-
-.callout {
-  margin-top: 18px;
+.published h4 a {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 12px 16px;
-  border-radius: 999px;
-  background: rgba(34, 197, 94, 0.12);
-  border: 1px solid rgba(74, 222, 128, 0.22);
+}
+
+.published h4 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.published h4 a svg {
+  color: var(--primary-light);
+  flex-shrink: 0;
+}
+
+.published h4 a:hover {
   color: var(--primary-pale);
-  font-size: 0.92rem;
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease;
 }
 
-.caseButton:hover .callout {
-  transform: translateX(4px);
-  background: rgba(34, 197, 94, 0.18);
-}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .featuredMedia img {
+    transform: perspective(1100px)
+      rotateX(calc(var(--pointer-y, 0) * -9deg))
+      rotateY(calc(var(--pointer-x, 0) * 9deg));
+    transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
 
-@media (max-width: 1024px) {
-  .workGrid,
-  .caseGrid {
-    grid-template-columns: 1fr;
+  .thumb img {
+    transition: transform 330ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .published:is(:hover, :focus-within) .thumb img {
+    transform: scale(1.035);
   }
 }
 
-@media (max-width: 768px) {
-  .work,
-  .body {
-    padding: 20px;
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .title {
+      animation: title-arrival linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
+    }
+
+    .featuredStage {
+      view-timeline-name: --case;
+    }
+
+    .featuredMedia {
+      animation: case-arrival linear both;
+      animation-timeline: --case;
+      animation-range: entry 0% cover 53%;
+    }
+
+    .featuredStage::before {
+      animation: stage-arrival linear both;
+      animation-timeline: --case;
+      animation-range: entry 0% cover 70%;
+    }
+
+    .thumb {
+      view-timeline-name: --preview;
+    }
+
+    .thumb img {
+      animation: preview-pan linear both;
+      animation-timeline: --preview;
+      animation-range: entry 0% exit 100%;
+    }
+
+    @keyframes title-arrival {
+      from { translate: 0 24px; }
+      to { translate: 0 0; }
+    }
+
+    @keyframes case-arrival {
+      from { translate: 0 13%; scale: 0.86; rotate: -4deg; }
+      to { translate: 0 0; scale: 1; rotate: 0deg; }
+    }
+
+    @keyframes stage-arrival {
+      from { translate: -9% 9%; }
+      to { translate: 6% -6%; }
+    }
+
+    @keyframes preview-pan {
+      from { translate: 0 -4%; scale: 1.1; }
+      to { translate: 0 4%; scale: 1.1; }
+    }
   }
-  .block + .block {
-    margin-top: 40px;
-  }
-  .callout {
-    width: 100%;
-    justify-content: center;
+}
+
+@media (max-width: 760px) {
+  .featured,
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

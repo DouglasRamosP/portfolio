@@ -10,23 +10,13 @@ export const profile = {
   headline:
     "Conecto visão de produto à execução técnica para evoluir plataformas SaaS.",
   intro:
-    "Sou Product Owner e desenvolvedor Full Stack na StayCloud, do Grupo Sourei. Combino experiência em infraestrutura, desenvolvimento e produto para transformar problemas dos usuários em soluções confiáveis — da priorização à implementação em TypeScript, SvelteKit e NestJS.",
-  highlights: [
-    {
-      value: "4s → menos de 1s",
-      text: "na resolução de conta do painel, com a migração da autenticação para o Commerce Core",
-    },
-    {
-      value: "Produto + engenharia",
-      text: "priorização por impacto, implementação e validação de entregas em produção",
-    },
-  ],
+    "Na StayCloud, do Grupo Sourei, combino experiência em infraestrutura, desenvolvimento e produto para resolver problemas dos usuários. Trabalho da priorização à implementação em TypeScript, SvelteKit e NestJS.",
 } as const;
 
 export const navLinks = [
+  { href: "#projetos", label: "Projetos" },
   { href: "#sobre", label: "Sobre" },
   { href: "#experiencia", label: "Experiência" },
-  { href: "#projetos", label: "Projetos" },
   { href: "#habilidades", label: "Habilidades" },
   { href: "#contato", label: "Contato" },
 ] as const;

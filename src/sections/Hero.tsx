@@ -1,42 +1,38 @@
 import { Icon } from "@/components/Icon";
 import { profile } from "@/data/profile";
+import { moveScene, resetScene } from "@/styles/pointerMotion";
 import styles from "./Hero.module.css";
 
 export function Hero() {
   return (
-    <header className={styles.shell} id="inicio">
-      <section className={styles.hero} aria-labelledby="intro-title">
-        <div className={styles.badge}>
-          <Icon name="code" size={16} />
-          <span>
-            <b>Full-Stack Developer</b> · Product Owner · Varginha, MG
-          </span>
+    <section className={styles.shell} id="inicio" aria-labelledby="intro-title">
+      <div className={styles.hero}>
+        <div className={styles.identity}>
+          <p className={styles.role}>{profile.role}</p>
+          <h1 id="intro-title" className={styles.title}>{profile.name}</h1>
         </div>
 
-        <h1 id="intro-title" className={styles.title}>
-          Conecto <em>visão de produto</em> à execução técnica para evoluir plataformas SaaS.
-        </h1>
+        <figure className={styles.portrait} onPointerMove={moveScene} onPointerLeave={resetScene}>
+          <div className={styles.visual}>
+            <div className={styles.field} />
+            <img src="/images/avatar.svg" alt="Retrato de Douglas Pimenta" width={320} height={320} />
+          </div>
+          <figcaption>{profile.location}</figcaption>
+        </figure>
 
-        <p className={styles.intro}>{profile.intro}</p>
-
-        <div className={styles.actions}>
-          <a className="btn btn--primary" href="#projetos">
-            Ver projetos
-          </a>
-          <a className="btn btn--secondary" href="#contato">
-            Falar comigo
-          </a>
+        <div className={styles.summary}>
+          <p className={styles.headline}>{profile.headline}</p>
+          <p className={styles.intro}>{profile.intro}</p>
+          <div className={styles.actions}>
+            <a className={styles.projects} href="#projetos">
+              Ver projetos <span aria-hidden="true">↓</span>
+            </a>
+            <a className={styles.cvLink} href={profile.cv} target="_blank" rel="noopener noreferrer">
+              Ver currículo <Icon name="external" size={16} />
+            </a>
+          </div>
         </div>
-
-        <div className={styles.highlights}>
-          {profile.highlights.map((h) => (
-            <div className={styles.highlight} key={h.value}>
-              <strong>{h.value}</strong>
-              <span>{h.text}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-    </header>
+      </div>
+    </section>
   );
 }

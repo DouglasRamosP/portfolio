@@ -5,6 +5,7 @@ export type WorkProject = {
   tagline: string;
   description: string;
   role: string;
+  result?: string;
   contributions: string[];
   stack: string[];
 };
@@ -18,6 +19,7 @@ export const workProjects: WorkProject[] = [
     description:
       "Plataforma de hospedagem com painel, checkout e integrações de faturamento e provisionamento. Atuo na evolução do produto e na migração gradual para o Commerce Core, um backend central em NestJS que unifica identidade e contas, mantendo o WHMCS como motor comercial.",
     role: "Full Stack Developer e Product Owner",
+    result: "De 4 s para menos de 1 s na resolução de conta",
     contributions: [
       "Commerce Core: desenvolvimento em NestJS, Prisma e PostgreSQL e migração incremental com Strangler Pattern. Autenticação unificada com Magic Link, Google OAuth, 2FA e SSO, preservando os vínculos dos usuários.",
       "Performance: a resolução de conta caiu de cerca de 4 segundos para menos de 1 segundo, eliminando timeouts associados ao login. A leitura de métricas do Proxmox passou a ocorrer em segundo plano, sem travar o painel de VPS.",

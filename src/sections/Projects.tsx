@@ -1,145 +1,100 @@
-import { useState } from "react";
-import { SectionHeading } from "@/components/SectionHeading";
-import { Carousel } from "@/components/Carousel";
+import { useCallback, useState } from "react";
 import { CaseModal } from "@/components/CaseModal";
 import { Icon } from "@/components/Icon";
 import { crmCase, publishedProjects, workProjects } from "@/data/projects";
+import { moveScene, resetScene } from "@/styles/pointerMotion";
 import styles from "./Projects.module.css";
 
 export function Projects() {
   const [caseOpen, setCaseOpen] = useState(false);
+  const closeCase = useCallback(() => setCaseOpen(false), []);
 
   return (
-    <section id="projetos" className="section" aria-labelledby="projetos-title">
-      <div className="section__content">
-        <SectionHeading
-          id="projetos-title"
-          kicker="Projetos"
-          title="Problemas reais, decisões técnicas e resultados."
-          description="Contribuições profissionais na StayCloud e na Wascer, projetos de formação e aplicações próprias. Cada entrega conecta implementação, experiência do usuário e contexto de negócio."
-          centered
-        />
+    <section id="projetos" className={styles.section} aria-labelledby="projetos-title" tabIndex={-1}>
+      <div className={styles.content}>
+        <h2 id="projetos-title" className={styles.title}>Projetos</h2>
 
-        <div className={styles.block}>
-          <div className={styles.blockHead}>
-            <span className="label">Experiência em produtos · Sourei</span>
-            <p>
-              Atuação atual na StayCloud e contribuições na Wascer, com foco em confiabilidade,
-              integração entre sistemas e experiência do cliente.
-            </p>
+        <article className={styles.featured}>
+          <div className={styles.featuredStage} onPointerMove={moveScene} onPointerLeave={resetScene}>
+            <div className={styles.featuredMedia}>
+              <img src={crmCase.image} alt={crmCase.alt} width={1600} height={1000} />
+            </div>
           </div>
+          <div className={styles.featuredBody}>
+            <p className={styles.eyebrow}>{crmCase.status}</p>
+            <h3>{crmCase.name}</h3>
+            <p className={styles.description}>{crmCase.summary}</p>
+            <p className={styles.stack}>{crmCase.stackLine}</p>
+            <div className="tags">
+              {crmCase.cardTags.map((tag) => <span key={tag}>{tag}</span>)}
+            </div>
+            <button
+              className={styles.caseButton}
+              type="button"
+              aria-haspopup="dialog"
+              onClick={() => setCaseOpen(true)}
+            >
+              {crmCase.video ? "Abrir case com vídeo" : "Abrir case"}
+              <Icon name="chevron-right" size={18} />
+            </button>
+          </div>
+        </article>
 
-          <div className={styles.workGrid}>
+        <div className={styles.group}>
+          <h3 className={styles.groupTitle}>Experiência em produtos</h3>
+          <div className={styles.grid}>
             {workProjects.map((project) => (
               <article className={styles.work} key={project.name}>
-                <div className="meta">
-                  <span>{project.period}</span>
-                  <span>Associado à {project.org}</span>
-                </div>
-                <h3>{project.name}</h3>
+                <p className={styles.eyebrow}>{project.org} · {project.period}</p>
+                <h4>{project.name}</h4>
                 <p className={styles.tagline}>{project.tagline}</p>
-                <p>{project.description}</p>
-                <span className={styles.role}>
-                  <Icon name="code" size={16} />
-                  {project.role}
-                </span>
-                <span className={styles.contribTitle}>Minhas contribuições</span>
-                <ul className={styles.contrib}>
-                  {project.contributions.map((c) => (
-                    <li key={c}>{c}</li>
-                  ))}
-                </ul>
-                <div className="tags">
-                  {project.stack.map((s) => (
-                    <span key={s}>{s}</span>
-                  ))}
-                </div>
+                <p className={styles.description}>{project.description}</p>
+                {project.result && (
+                  <p className={styles.result}>{project.result}</p>
+                )}
+                <p className={styles.stack}>{project.role}</p>
+                <details className={styles.details}>
+                  <summary>Minhas contribuições <Icon name="chevron-right" size={16} /></summary>
+                  <ul className="bullets">
+                    {project.contributions.map((contribution) => <li key={contribution}>{contribution}</li>)}
+                  </ul>
+                  <div className="tags">
+                    {project.stack.map((tech) => <span key={tech}>{tech}</span>)}
+                  </div>
+                </details>
               </article>
             ))}
           </div>
         </div>
 
-        <div className={styles.block}>
-          <div className={styles.blockHead}>
-            <span className="label">Projetos publicados</span>
-            <p>Aplicações disponíveis publicamente, com foco em execução, interface e experiência de uso.</p>
-          </div>
-
-          <Carousel label="Projetos publicados">
+        <div className={styles.group}>
+          <h3 className={styles.groupTitle}>Projetos publicados</h3>
+          <div className={styles.grid}>
             {publishedProjects.map((project) => (
-              <a
-                className={styles.card}
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={project.name}
-              >
+              <article key={project.name} className={styles.published}>
                 <div className={styles.thumb}>
                   <img src={project.image} alt={project.alt} loading="lazy" />
                 </div>
-                <div className={styles.body}>
-                  <div className="meta">
-                    <span>{project.kind}</span>
-                    <span>{project.stack}</span>
-                  </div>
-                  <h3>
-                    {project.name}
-                    <Icon name="external" size={16} />
-                  </h3>
-                  <p>{project.description}</p>
+                <div className={styles.publishedBody}>
+                  <p className={styles.eyebrow}>{project.kind}</p>
+                  <h4>
+                    <a href={project.url} target="_blank" rel="noopener noreferrer">
+                      {project.name} <Icon name="external" size={18} />
+                    </a>
+                  </h4>
+                  <p className={styles.description}>{project.description}</p>
+                  <p className={styles.stack}>{project.stack}</p>
                   <div className="tags">
-                    {project.tags.map((t) => (
-                      <span key={t}>{t}</span>
-                    ))}
+                    {project.tags.map((tag) => <span key={tag}>{tag}</span>)}
                   </div>
                 </div>
-              </a>
+              </article>
             ))}
-          </Carousel>
-        </div>
-
-        <div className={styles.block}>
-          <div className={styles.blockHead}>
-            <span className="label">Em andamento</span>
-            <p>Produtos em evolução com foco forte em modelagem de negócio, operação e arquitetura pronta para crescer.</p>
-          </div>
-
-          <div className={styles.caseGrid}>
-            <button
-              className={`${styles.card} ${styles.caseButton}`}
-              type="button"
-              aria-haspopup="dialog"
-              onClick={() => setCaseOpen(true)}
-            >
-              <div className={styles.thumb}>
-                <img src={crmCase.image} alt={crmCase.alt} loading="lazy" />
-                <span className={styles.thumbBadge}>{crmCase.status}</span>
-              </div>
-              <div className={styles.body}>
-                <div className="meta">
-                  <span>{crmCase.status}</span>
-                  <span>{crmCase.stackLine}</span>
-                </div>
-                <h3>{crmCase.name}</h3>
-                <p>{crmCase.summary}</p>
-                <div className="tags">
-                  {crmCase.cardTags.map((t) => (
-                    <span key={t}>{t}</span>
-                  ))}
-                </div>
-                <span className={styles.callout}>
-                  <Icon name="pointer" size={16} />
-                  {crmCase.video
-                    ? "Abrir case com vídeo e detalhes do produto"
-                    : "Abrir case com detalhes do produto"}
-                </span>
-              </div>
-            </button>
           </div>
         </div>
       </div>
 
-      {caseOpen && <CaseModal study={crmCase} onClose={() => setCaseOpen(false)} />}
+      {caseOpen && <CaseModal study={crmCase} onClose={closeCase} />}
     </section>
   );
 }
